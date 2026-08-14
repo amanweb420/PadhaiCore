@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   background: #050816;
   font-family: Arial, sans-serif;
@@ -14,33 +20,44 @@ body {
   position: relative;
   width: 100%;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-/* आपकी पूरी design image */
+/* =========================
+   MAIN DESIGN IMAGE
+   ========================= */
+
 .design-image {
   display: block;
   width: 100%;
   height: auto;
+  min-height: 100px;
+  object-fit: contain;
 }
 
-/* Buttons को image के ऊपर रखना */
+/* =========================
+   WORKING BUTTON LAYER
+   Image के ऊपर केवल clickable area
+   ========================= */
+
 .button-layer {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
 }
 
-/* सभी buttons */
+/* सभी working buttons */
 .menu-btn {
   position: absolute;
 
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 0;
+  outline: none;
   border-radius: 18px;
 
-  color: white;
+  background: transparent;
+  color: transparent;
+
   cursor: pointer;
 
   display: flex;
@@ -52,39 +69,35 @@ body {
 
   text-align: left;
 
-  background: rgba(5, 15, 40, 0.15);
+  /* Image का original design दिखाई देगा */
+  backdrop-filter: none;
 
-  backdrop-filter: blur(2px);
-
-  transition: 0.25s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-/* Button text */
-.menu-btn span {
-  font-size: 30px;
-  margin-bottom: 8px;
-}
-
-.menu-btn b {
-  font-size: 21px;
-  margin-bottom: 8px;
-}
-
+/* Image में पहले से text है,
+   इसलिए overlay का text छिपा रहेगा */
+.menu-btn span,
+.menu-btn b,
 .menu-btn small {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #eeeeee;
+  opacity: 0;
 }
 
-/* Hover */
+/* Touch/click पर हल्का indication */
 .menu-btn:hover {
-  transform: translateY(-4px) scale(1.01);
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.04);
+  transform: scale(1.01);
 }
 
-/* Button positions */
+.menu-btn:active {
+  transform: scale(0.98);
+}
 
-/* 1 */
+/* =========================
+   EXACT 2 × 2 STRUCTURE
+   ========================= */
+
+/* 1 — Board Analysis */
 .board {
   left: 4.5%;
   top: 39%;
@@ -92,7 +105,7 @@ body {
   height: 20%;
 }
 
-/* 2 */
+/* 2 — Class 11 */
 .class11 {
   right: 4.5%;
   top: 39%;
@@ -100,7 +113,7 @@ body {
   height: 20%;
 }
 
-/* 3 */
+/* 3 — Class 12 */
 .class12 {
   left: 4.5%;
   top: 59.5%;
@@ -108,7 +121,7 @@ body {
   height: 20%;
 }
 
-/* 4 */
+/* 4 — JEE / IIT */
 .jee {
   right: 4.5%;
   top: 59.5%;
@@ -116,7 +129,7 @@ body {
   height: 20%;
 }
 
-/* 5 */
+/* 5 — Editing */
 .editing {
   left: 4.5%;
   top: 80%;
@@ -124,31 +137,23 @@ body {
   height: 15%;
 }
 
+/* =========================
+   MOBILE
+   ========================= */
 
-/* Mobile */
 @media (max-width: 600px) {
 
   .menu-btn {
     border-radius: 10px;
-    padding: 8px;
-  }
-
-  .menu-btn span {
-    font-size: 15px;
-    margin-bottom: 2px;
-  }
-
-  .menu-btn b {
-    font-size: 11px;
-    margin-bottom: 2px;
-  }
-
-  .menu-btn small {
-    font-size: 7px;
-    line-height: 1.2;
+    padding: 5px;
   }
 
   .menu-btn:hover {
     transform: none;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .menu-btn:active {
+    transform: scale(0.99);
   }
 }
