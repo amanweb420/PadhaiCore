@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Class 11 - PadhaiCore</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050816;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #00d4ff, #8b5cf6, #00ff88);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .header p {
+      color: #b9c2d0;
+      font-size: 15px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: #111a35;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #28345c;
+    }
+
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .subject {
+      padding: 25px;
+      min-height: 170px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .subject .icon {
+      font-size: 38px;
+    }
+
+    .subject h2 {
+      margin-top: 10px;
+      font-size: 22px;
+    }
+
+    .subject p {
+      color: #d7dbe5;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .open {
+      margin-top: 18px;
+      width: fit-content;
+      padding: 9px 15px;
+      border-radius: 9px;
+      border: none;
+      color: white;
+      background: rgba(255,255,255,0.12);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .physics {
+      background: linear-gradient(135deg, #0646b8, #13215c);
+    }
+
+    .chemistry {
+      background: linear-gradient(135deg, #008c65, #123d3a);
+    }
+
+    .maths {
+      background: linear-gradient(135deg, #7b20c9, #32105e);
+    }
+
+    .english {
+      background: linear-gradient(135deg, #c45b16, #60230f);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+      }
+
+      .subjects {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="index.html" class="back">← Home</a>
+
+    <div class="header">
+      <h1>Class 11</h1>
+      <p>Bihar Board • Complete Study Hub</p>
+    </div>
+
+    <div class="subjects">
+
+      <div class="subject physics">
+        <div>
+          <div class="icon">⚡</div>
+          <h2>Physics</h2>
+          <p>Chapters • Notes • Questions • Revision</p>
+        </div>
+        <button class="open" onclick="openSubject('Physics')">
+          Open Physics →
+        </button>
+      </div>
+
+      <div class="subject chemistry">
+        <div>
+          <div class="icon">🧪</div>
+          <h2>Chemistry</h2>
+          <p>Chapters • Notes • Questions • Revision</p>
+        </div>
+        <button class="open" onclick="openSubject('Chemistry')">
+          Open Chemistry →
+        </button>
+      </div>
+
+      <div class="subject maths">
+        <div>
+          <div class="icon">📐</div>
+          <h2>Mathematics</h2>
+          <p>Chapters • Examples • Questions • Practice</p>
+        </div>
+        <button class="open" onclick="openSubject('Mathematics')">
+          Open Maths →
+        </button>
+      </div>
+
+      <div class="subject english">
+        <div>
+          <div class="icon">📚</div>
+          <h2>English</h2>
+          <p>Grammar • Chapters • Writing • Practice</p>
+        </div>
+        <button class="open" onclick="openSubject('English')">
+          Open English →
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function openSubject(subject) {
+      alert(subject + " section जल्द शुरू होगा!");
+    }
+  </script>
+
+</body>
+</html>
