@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Board Analysis | PadhaiCore</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #050816;
+      color: white;
+      padding-bottom: 30px;
+    }
+
+    .header {
+      padding: 20px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, #101d4d, #18256b);
+      border-bottom: 1px solid #334cff;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #cbd5ff;
+      font-size: 14px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 9px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.12);
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .welcome {
+      padding: 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #111d42, #10172e);
+      border: 1px solid #263b70;
+      margin-bottom: 18px;
+    }
+
+    .welcome h2 {
+      color: #6ea8ff;
+      margin-bottom: 8px;
+    }
+
+    .welcome p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .subject {
+      padding: 18px;
+      border-radius: 18px;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .physics {
+      background: linear-gradient(135deg, #123d8c, #102050);
+    }
+
+    .chemistry {
+      background: linear-gradient(135deg, #08785f, #123b35);
+    }
+
+    .maths {
+      background: linear-gradient(135deg, #6822a5, #291343);
+    }
+
+    .english {
+      background: linear-gradient(135deg, #a84d18, #55220d);
+    }
+
+    .subject .icon {
+      font-size: 35px;
+    }
+
+    .subject h3 {
+      margin-top: 8px;
+      font-size: 20px;
+    }
+
+    .subject p {
+      color: #dbe4ff;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 6px;
+    }
+
+    .open-btn {
+      margin-top: 14px;
+      padding: 9px 13px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .features {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .feature {
+      padding: 16px;
+      border-radius: 15px;
+      background: #0d1429;
+      border: 1px solid #202d50;
+    }
+
+    .feature h3 {
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .feature p {
+      color: #aeb9d4;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .subjects,
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>📊 Board Analysis</h1>
+    <p>Bihar Board Class 12 • Smart Preparation Hub</p>
+
+    <a href="index.html" class="back">← Home पर वापस</a>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h2>🎯 अपना Board Preparation शुरू करो</h2>
+      <p>
+        Chapter-wise analysis, important topics, PYQ,
+        objective questions और subjective questions —
+        सब कुछ एक जगह।
+      </p>
+    </section>
+
+    <section class="subjects">
+
+      <div class="subject physics">
+        <div>
+          <div class="icon">⚡</div>
+          <h3>Physics</h3>
+          <p>
+            Chapters • Marks Weightage • PYQ •
+            Important Topics
+          </p>
+        </div>
+
+        <button class="open-btn" onclick="comingSoon('Physics')">
+          Open Physics →
+        </button>
+      </div>
+
+      <div class="subject chemistry">
+        <div>
+          <div class="icon">🧪</div>
+          <h3>Chemistry</h3>
+          <p>
+            Chapters • Important Reactions •
+            PYQ • Objective
+          </p>
+        </div>
+
+        <button class="open-btn" onclick="comingSoon('Chemistry')">
+          Open Chemistry →
+        </button>
+      </div>
+
+      <div class="subject maths">
+        <div>
+          <div class="icon">📐</div>
+          <h3>Mathematics</h3>
+          <p>
+            Chapters • Formula • PYQ •
+            Important Questions
+          </p>
+        </div>
+
+        <button class="open-btn" onclick="comingSoon('Mathematics')">
+          Open Maths →
+        </button>
+      </div>
+
+      <div class="subject english">
+        <div>
+          <div class="icon">📚</div>
+          <h3>English</h3>
+          <p>
+            Grammar • Literature • Writing •
+            Important Questions
+          </p>
+        </div>
+
+        <button class="open-btn" onclick="comingSoon('English')">
+          Open English →
+        </button>
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <div class="feature">
+        <h3>📈 Marks Analysis</h3>
+        <p>Chapter और topic के हिसाब से marks importance.</p>
+      </div>
+
+      <div class="feature">
+        <h3>📝 PYQ</h3>
+        <p>Previous Year Questions को chapter-wise व्यवस्थित किया जाएगा.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🔥 Important Topics</h3>
+        <p>Exam के लिए important topics अलग से दिखेंगे.</p>
+      </div>
+
+      <div class="feature">
+        <h3>✅ Objective + Subjective</h3>
+        <p>दोनों तरह के questions के लिए अलग preparation.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    function comingSoon(subject) {
+      alert(subject + " analysis जल्द शुरू होगा! 🚀");
+    }
+  </script>
+
+</body>
+          </html>
