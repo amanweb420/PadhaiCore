@@ -1,23 +1,31 @@
+// PadhaiCore - Main Navigation
+
 function openSection(section) {
 
-  if (section === "board") {
-    alert("Board Analysis जल्द शुरू होगा।");
-  }
+  switch (section) {
 
-  else if (section === "class11") {
-    alert("Class 11 section जल्द शुरू होगा।");
-  }
+    case "board":
+      window.location.href = "board.html";
+      break;
 
-  else if (section === "class12") {
-    alert("Class 12 section जल्द शुरू होगा।");
-  }
+    case "class11":
+      window.location.href = "class11.html";
+      break;
 
-  else if (section === "jee") {
-    alert("JEE / IIT section जल्द शुरू होगा।");
-  }
+    case "class12":
+      window.location.href = "class12.html";
+      break;
 
-  else if (section === "editing") {
-    alert("Editing section जल्द शुरू होगा।");
+    case "jee":
+      window.location.href = "jee.html";
+      break;
+
+    case "editing":
+      window.location.href = "editing.html";
+      break;
+
+    default:
+      console.log("Section not found:", section);
   }
 
 }
