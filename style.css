@@ -1,652 +1,154 @@
-/* =====================================================
-   PADHAICORE — MAIN DESIGN
-   Dark • Colourful • Student Focused
-   ===================================================== */
-
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 10% 10%, rgba(40, 80, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 90% 20%, rgba(130, 40, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 50% 100%, rgba(0, 180, 255, 0.12), transparent 35%),
-    #050816;
-
-  color: #f5f7ff;
-  font-family:
-    Arial,
-    "Noto Sans Devanagari",
-    "Noto Sans",
-    sans-serif;
-
-  line-height: 1.6;
+  background: #050816;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-/* =====================================================
-   HEADER
-   ===================================================== */
-
-header {
+.home {
   position: relative;
-  overflow: hidden;
-
-  padding: 28px 20px 24px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #07132f 0%,
-      #10104a 45%,
-      #071a2e 100%
-    );
-
-  border-bottom: 1px solid rgba(80, 150, 255, 0.35);
-
-  text-align: center;
-
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.45);
-}
-
-header::before {
-  content: "";
-  position: absolute;
-
-  width: 220px;
-  height: 220px;
-
-  background: rgba(70, 100, 255, 0.18);
-
-  border-radius: 50%;
-
-  filter: blur(60px);
-
-  top: -100px;
-  left: -50px;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-
-  width: 200px;
-  height: 200px;
-
-  background: rgba(170, 50, 255, 0.15);
-
-  border-radius: 50%;
-
-  filter: blur(60px);
-
-  right: -50px;
-  bottom: -100px;
-}
-
-header h1 {
-  position: relative;
-  z-index: 2;
-
-  margin: 0;
-
-  font-size: clamp(32px, 7vw, 54px);
-
-  font-weight: 800;
-
-  letter-spacing: -1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #ffffff,
-      #69a7ff,
-      #b86cff,
-      #ffffff
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-header p {
-  position: relative;
-  z-index: 2;
-
-  margin: 7px 0 0;
-
-  color: #b8c6e8;
-
-  font-size: 15px;
-}
-
-
-/* =====================================================
-   MAIN CONTAINER
-   ===================================================== */
-
-.container {
-  width: min(1100px, calc(100% - 28px));
-
-  margin: auto;
-
-  padding: 25px 0 50px;
-}
-
-
-/* =====================================================
-   CARDS
-   ===================================================== */
-
-.card {
-  position: relative;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(18, 30, 65, 0.96),
-      rgba(8, 15, 35, 0.96)
-    );
-
-  border: 1px solid rgba(90, 120, 200, 0.35);
-
-  border-radius: 22px;
-
-  padding: 24px;
-
-  margin-bottom: 18px;
-
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.38),
-    inset 0 1px rgba(255, 255, 255, 0.04);
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.card::before {
-  content: "";
-
-  position: absolute;
-
-  width: 180px;
-  height: 180px;
-
-  border-radius: 50%;
-
-  background: rgba(70, 120, 255, 0.12);
-
-  filter: blur(45px);
-
-  top: -80px;
-  right: -60px;
-
-  pointer-events: none;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-
-  border-color: rgba(100, 170, 255, 0.75);
-
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.5),
-    0 0 25px rgba(50, 120, 255, 0.13);
-}
-
-.card h2 {
-  margin-top: 0;
-
-  color: #ffffff;
-
-  font-size: 23px;
-}
-
-.card p {
-  color: #c5cee5;
-}
-
-
-/* =====================================================
-   HEADINGS
-   ===================================================== */
-
-h2,
-h3 {
-  color: #ffffff;
-}
-
-.small {
-  color: #aebbd7;
-}
-
-
-/* =====================================================
-   INPUTS / TEXTAREA
-   ===================================================== */
-
-input,
-textarea,
-select {
   width: 100%;
-
-  padding: 13px 14px;
-
-  margin: 6px 0;
-
-  border-radius: 12px;
-
-  border: 1px solid rgba(120, 150, 220, 0.35);
-
-  background: #080f22;
-
-  color: #ffffff;
-
-  font-size: 16px;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  max-width: 1100px;
+  margin: auto;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #5d9cff;
-
-  box-shadow:
-    0 0 0 3px rgba(70, 130, 255, 0.12);
+/* आपकी पूरी design image */
+.design-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-textarea {
-  min-height: 160px;
-
-  resize: vertical;
+/* Buttons को image के ऊपर रखना */
+.button-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+/* सभी buttons */
+.menu-btn {
+  position: absolute;
 
-/* =====================================================
-   BUTTONS
-   ===================================================== */
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 18px;
 
-button {
-  border: 0;
-
-  border-radius: 12px;
-
-  padding: 12px 17px;
-
-  margin: 5px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #1769ff,
-      #5835d9
-    );
-
-  color: #ffffff;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
+  color: white;
   cursor: pointer;
 
-  box-shadow:
-    0 7px 18px rgba(30, 80, 220, 0.25);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    filter 0.2s ease;
-}
-
-button:hover {
-  transform: translateY(-2px);
-
-  filter: brightness(1.12);
-
-  box-shadow:
-    0 10px 25px rgba(50, 110, 255, 0.35);
-}
-
-button:active {
-  transform: scale(0.97);
-}
-
-button:disabled {
-  opacity: 0.5;
-
-  cursor: not-allowed;
-
-  transform: none;
-}
-
-
-/* =====================================================
-   BUTTON COLOURS
-   ===================================================== */
-
-button.green {
-  background:
-    linear-gradient(
-      135deg,
-      #00b978,
-      #087c63
-    );
-}
-
-button.orange {
-  background:
-    linear-gradient(
-      135deg,
-      #ff9f1a,
-      #e85d04
-    );
-}
-
-button.red {
-  background:
-    linear-gradient(
-      135deg,
-      #ff4d6d,
-      #c9184a
-    );
-}
-
-button.gray {
-  background:
-    linear-gradient(
-      135deg,
-      #46516b,
-      #293246
-    );
-}
-
-button.purple {
-  background:
-    linear-gradient(
-      135deg,
-      #9b4dff,
-      #5a20c8
-    );
-}
-
-
-/* =====================================================
-   ROW
-   ===================================================== */
-
-.row {
   display: flex;
-
-  gap: 12px;
-
-  flex-wrap: wrap;
-
-  align-items: center;
-}
-
-.row > * {
-  flex: 1;
-}
-
-
-/* =====================================================
-   PROGRESS
-   ===================================================== */
-
-.progress {
-  width: 100%;
-
-  height: 9px;
-
-  background: #10182d;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  margin: 12px 0;
-}
-
-#progressBar {
-  height: 100%;
-
-  width: 0%;
-
-  border-radius: 20px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #2376ff,
-      #8d4dff,
-      #00d4ff
-    );
-
-  box-shadow:
-    0 0 15px rgba(70, 130, 255, 0.55);
-
-  transition: width 0.25s ease;
-}
-
-
-/* =====================================================
-   STATUS
-   ===================================================== */
-
-.status {
-  padding: 10px 14px;
-
-  border-radius: 10px;
-
-  background: rgba(40, 80, 150, 0.12);
-
-  color: #a9c7ff;
-
-  border: 1px solid rgba(90, 140, 230, 0.18);
-}
-
-
-/* =====================================================
-   IMAGE PREVIEW
-   ===================================================== */
-
-#photoPreview {
-  display: block;
-
-  max-width: 100%;
-
-  max-height: 500px;
-
-  margin: 15px auto;
-
-  border-radius: 16px;
-
-  border: 1px solid rgba(100, 150, 255, 0.35);
-
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.45);
-}
-
-.hidden {
-  display: none !important;
-}
-
-
-/* =====================================================
-   EDITOR
-   ===================================================== */
-
-#editor {
-  min-height: 260px;
-
-  padding: 18px;
-
-  border-radius: 16px;
-
-  background: #070d1c;
-
-  color: #f5f7ff;
-
-  border: 1px solid rgba(100, 140, 220, 0.35);
-
-  outline: none;
-}
-
-#editor:focus {
-  border-color: #6b9cff;
-
-  box-shadow:
-    0 0 0 3px rgba(80, 130, 255, 0.12);
-}
-
-
-/* =====================================================
-   MOTIVATION AREA
-   ===================================================== */
-
-.quote,
-.motivation,
-.focus-box {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(22, 34, 72, 0.95),
-      rgba(11, 19, 42, 0.95)
-    );
-
-  border: 1px solid rgba(120, 100, 255, 0.3);
-
-  border-radius: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
   padding: 20px;
 
-  margin: 18px 0;
+  text-align: left;
 
-  color: #e5eaff;
+  background: rgba(5, 15, 40, 0.15);
 
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+
+  transition: 0.25s ease;
+}
+
+/* Button text */
+.menu-btn span {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.menu-btn b {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.menu-btn small {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #eeeeee;
+}
+
+/* Hover */
+.menu-btn:hover {
+  transform: translateY(-4px) scale(1.01);
+  background: rgba(255,255,255,0.12);
+}
+
+/* Button positions */
+
+/* 1 */
+.board {
+  left: 4.5%;
+  top: 39%;
+  width: 44%;
+  height: 20%;
+}
+
+/* 2 */
+.class11 {
+  right: 4.5%;
+  top: 39%;
+  width: 44%;
+  height: 20%;
+}
+
+/* 3 */
+.class12 {
+  left: 4.5%;
+  top: 59.5%;
+  width: 44%;
+  height: 20%;
+}
+
+/* 4 */
+.jee {
+  right: 4.5%;
+  top: 59.5%;
+  width: 44%;
+  height: 20%;
+}
+
+/* 5 */
+.editing {
+  left: 4.5%;
+  top: 80%;
+  width: 91%;
+  height: 15%;
 }
 
 
-/* =====================================================
-   LINKS
-   ===================================================== */
+/* Mobile */
+@media (max-width: 600px) {
 
-a {
-  color: #69a7ff;
+  .menu-btn {
+    border-radius: 10px;
+    padding: 8px;
+  }
 
-  text-decoration: none;
+  .menu-btn span {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+
+  .menu-btn b {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .menu-btn small {
+    font-size: 7px;
+    line-height: 1.2;
+  }
+
+  .menu-btn:hover {
+    transform: none;
+  }
 }
-
-a:hover {
-  color: #a879ff;
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-footer {
-  padding: 28px 15px;
-
-  text-align: center;
-
-  color: #8492b5;
-
-  border-top: 1px solid rgba(100, 130, 200, 0.18);
-
-  background: #040713;
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 700px) {
-
-  header {
-    padding: 24px 15px;
-  }
-
-  header h1 {
-    font-size: 34px;
-  }
-
-  .container {
-    width: min(100% - 18px, 1100px);
-
-    padding-top: 18px;
-  }
-
-  .card {
-    padding: 18px;
-
-    border-radius: 18px;
-  }
-
-  .card h2 {
-    font-size: 21px;
-  }
-
-  .row {
-    flex-direction: column;
-
-    align-items: stretch;
-  }
-
-  .row > * {
-    width: 100%;
-  }
-
-  button {
-    width: 100%;
-
-    margin: 5px 0;
-  }
-
-}
-
-
-/* =====================================================
-   EXTRA GLOW
-   ===================================================== */
-
-.card:nth-child(1) {
-  border-color: rgba(40, 110, 255, 0.45);
-}
-
-.card:nth-child(2) {
-  border-color: rgba(0, 210, 140, 0.42);
-}
-
-.card:nth-child(3) {
-  border-color: rgba(170, 70, 255, 0.42);
-}
-
-.card:nth-child(4) {
-  border-color: rgba(255, 130, 30, 0.45);
-}
-
-.card:nth-child(5) {
-  border-color: rgba(0, 180, 255, 0.45);
-  }
