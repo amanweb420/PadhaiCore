@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>PadhaiCore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background decoration -->
+  <div class="bg-circle circle-one"></div>
+  <div class="bg-circle circle-two"></div>
+  <div class="bg-circle circle-three"></div>
+
+  <main class="app">
+
+    <!-- HEADER -->
+    <header class="hero">
+
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+
+        <div>
+          <h1>PadhaiCore</h1>
+          <p>Learn • Practice • Analyse • Improve</p>
+        </div>
+      </div>
+
+      <div class="hero-illustration">
+        <div class="book book-back">📖</div>
+        <div class="book book-front">📚</div>
+        <div class="spark spark-one">✦</div>
+        <div class="spark spark-two">✦</div>
+        <div class="spark spark-three">•</div>
+      </div>
+
+      <div class="motivation">
+        <span>💡</span>
+        <p id="motivationText">
+          आज थोड़ा पढ़ो, कल खुद पर गर्व करो।
+        </p>
+      </div>
+
+    </header>
+
+
+    <!-- MAIN OPTIONS -->
+    <section class="section-heading">
+      <span>YOUR STUDY SPACE</span>
+      <h2>आज क्या करना है?</h2>
+    </section>
+
+
+    <section class="cards">
+
+      <!-- BOARD ANALYSIS -->
+      <button class="study-card board-card" onclick="openSection('board')">
+
+        <div class="card-top">
+          <div class="card-icon">📊</div>
+          <span class="arrow">↗</span>
+        </div>
+
+        <div class="card-content">
+          <h3>Board Analysis</h3>
+          <p>Chapter • Marks • PYQ • Objective • Subjective</p>
+        </div>
+
+        <div class="mini-chart">
+          <span style="height:35%"></span>
+          <span style="height:55%"></span>
+          <span style="height:45%"></span>
+          <span style="height:75%"></span>
+          <span style="height:90%"></span>
+        </div>
+
+      </button>
+
+
+      <!-- CLASS 11 -->
+      <button class="study-card class11-card" onclick="openSection('class11')">
+
+        <div class="card-top">
+          <div class="card-icon">📘</div>
+          <span class="arrow">↗</span>
+        </div>
+
+        <div class="card-content">
+          <h3>Class 11</h3>
+          <p>Board Study • Chapters • Questions • Revision</p>
+        </div>
+
+        <div class="floating-symbol">11</div>
+
+      </button>
+
+
+      <!-- CLASS 12 -->
+      <button class="study-card class12-card" onclick="openSection('class12')">
+
+        <div class="card-top">
+          <div class="card-icon">📕</div>
+          <span class="arrow">↗</span>
+        </div>
+
+        <div class="card-content">
+          <h3>Class 12</h3>
+          <p>Board Study • Notes • Questions • Revision</p>
+        </div>
+
+        <div class="floating-symbol">12</div>
+
+      </button>
+
+
+      <!-- JEE -->
+      <button class="study-card jee-card" onclick="openSection('jee')">
+
+        <div class="card-top">
+          <div class="card-icon">🎯</div>
+          <span class="arrow">↗</span>
+        </div>
+
+        <div class="card-content">
+          <h3>JEE / IIT</h3>
+          <p>Class 11 • Class 12 • Physics • Chemistry • Maths</p>
+        </div>
+
+        <div class="target-decoration">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </button>
+
+
+      <!-- EDITING -->
+      <button class="study-card editing-card" onclick="openSection('editing')">
+
+        <div class="card-top">
+          <div class="card-icon">✏️</div>
+          <span class="arrow">↗</span>
+        </div>
+
+        <div class="card-content">
+          <h3>Editing</h3>
+          <p>Photo • Mark • Highlight • Write • Save</p>
+        </div>
+
+        <div class="edit-decoration">
+          <span>✎</span>
+          <span>🟨</span>
+          <span>✓</span>
+        </div>
+
+      </button>
+
+    </section>
+
+
+    <!-- QUICK STATS -->
+    <section class="quick-area">
+
+      <div class="quick-title">
+        <span>⚡</span>
+        <div>
+          <h3>Keep Moving</h3>
+          <p>छोटे steps भी progress हैं।</p>
+        </div>
+      </div>
+
+      <div class="progress-box">
+        <div class="progress-info">
+          <span>Today's Focus</span>
+          <strong>Start your practice</strong>
+        </div>
+
+        <div class="progress-line">
+          <div></div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <footer>
+      <span>Made for focused learning</span>
+      <strong>✦ PadhaiCore</strong>
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
