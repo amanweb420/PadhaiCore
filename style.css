@@ -1,1 +1,80 @@
+// ===============================
+// PadhaiCore - Home Page
+// ===============================
 
+
+// Motivation messages
+
+const motivationMessages = [
+  "आज थोड़ा पढ़ो, कल खुद पर गर्व करो।",
+  "मन नहीं कर रहा? बस 10 मिनट शुरू करो।",
+  "Concept समझो, सिर्फ answer याद मत करो।",
+  "हर question तुम्हें थोड़ा बेहतर बनाता है।",
+  "Consistency, motivation से ज्यादा powerful है।"
+];
+
+
+// Random motivation
+
+const motivationText =
+  document.getElementById("motivationText");
+
+if (motivationText) {
+
+  const randomIndex =
+    Math.floor(
+      Math.random() * motivationMessages.length
+    );
+
+  motivationText.textContent =
+    motivationMessages[randomIndex];
+}
+
+
+// ===============================
+// Main section navigation
+// ===============================
+
+function openSection(section) {
+
+  if (section === "board") {
+
+    alert(
+      "📊 Board Analysis\n\nयह section अगली stage में बनाया जाएगा।"
+    );
+
+  }
+
+  else if (section === "class11") {
+
+    alert(
+      "📘 Class 11 Board\n\nयह section अगली stage में बनाया जाएगा।"
+    );
+
+  }
+
+  else if (section === "class12") {
+
+    alert(
+      "📕 Class 12 Board\n\nयह section अगली stage में बनाया जाएगा।"
+    );
+
+  }
+
+  else if (section === "jee") {
+
+    alert(
+      "🎯 JEE / IIT\n\nClass 11 और Class 12 JEE sections अगली stage में बनाए जाएँगे।"
+    );
+
+  }
+
+  else if (section === "editing") {
+
+    alert(
+      "✏️ Editing\n\nOriginal Photo Editing system अगली stage में बनाया जाएगा।"
+    );
+
+  }
+
+  }
