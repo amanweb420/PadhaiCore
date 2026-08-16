@@ -166,6 +166,32 @@
     </div>
 
   </div>
+<script>
 
+  const notesImages = [
+    "page1.jpg"
+  ];
+
+  const notesContainer = document.getElementById("notes-container");
+
+  notesImages.forEach((image, index) => {
+
+    const page = document.createElement("div");
+    page.className = "note-page";
+
+    page.innerHTML = `
+      <div class="page-title">
+        Notes Page ${index + 1}
+      </div>
+
+      <img src="assets/physics/chapter1/notes/${image}"
+           alt="Chapter 1 Notes Page ${index + 1}">
+    `;
+
+    notesContainer.appendChild(page);
+
+  });
+
+</script>
 </body>
 </html>
