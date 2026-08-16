@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JEE / IIT - PadhaiCore</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050816;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #ff7a18, #ff2d95, #7c4dff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .header p {
+      color: #b9c2d0;
+      font-size: 15px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: #111a35;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #28345c;
+    }
+
+    .intro {
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #17134a, #28134c);
+      border: 1px solid #453078;
+    }
+
+    .intro h2 {
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .classes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .class-card {
+      min-height: 230px;
+      padding: 25px;
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .class11 {
+      background: linear-gradient(135deg, #075985, #172554);
+    }
+
+    .class12 {
+      background: linear-gradient(135deg, #7e22ce, #3b0764);
+    }
+
+    .icon {
+      font-size: 45px;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    .class-card p {
+      color: #dbe4ff;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 7px;
+    }
+
+    .open {
+      margin-top: 18px;
+      width: fit-content;
+      padding: 10px 17px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .coming {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #0d1429;
+      border: 1px solid #202d50;
+      color: #b9c2d0;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+      }
+
+      .classes {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="index.html" class="back">← Home</a>
+
+    <div class="header">
+      <h1>🎯 JEE / IIT</h1>
+      <p>Class 11 + Class 12 • JEE Preparation Hub</p>
+    </div>
+
+    <div class="intro">
+      <h2>🚀 JEE Preparation</h2>
+      <p>
+        Class 11 और Class 12 के JEE preparation
+        को अलग-अलग व्यवस्थित करके पढ़ने, practice करने
+        और revision करने के लिए यह section रहेगा।
+      </p>
+    </div>
+
+    <div class="classes">
+
+      <div class="class-card class11">
+
+        <div>
+          <div class="icon">📚</div>
+
+          <h2>JEE Class 11</h2>
+
+          <p>
+            Physics • Chemistry • Mathematics<br>
+            Chapters • Practice • Revision
+          </p>
+        </div>
+
+        <button class="open" onclick="comingSoon('JEE Class 11')">
+          Open Class 11 →
+        </button>
+
+      </div>
+
+
+      <div class="class-card class12">
+
+        <div>
+          <div class="icon">🎯</div>
+
+          <h2>JEE Class 12</h2>
+
+          <p>
+            Physics • Chemistry • Mathematics<br>
+            Chapters • PYQ • Practice
+          </p>
+        </div>
+
+        <button class="open" onclick="comingSoon('JEE Class 12')">
+          Open Class 12 →
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="coming">
+      💡 आगे यहाँ JEE के chapters, PYQ, practice questions,
+      mock tests और revision system जोड़े जाएंगे।
+    </div>
+
+  </div>
+
+  <script>
+    function comingSoon(section) {
+      alert(section + " section जल्द शुरू होगा! 🚀");
+    }
+  </script>
+
+</body>
+</html>
