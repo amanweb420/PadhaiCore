@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Class 12 Physics - PadhaiCore</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050816;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding: 15px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: #111a35;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #28345c;
+    }
+
+    .header {
+      text-align: center;
+      padding: 15px 10px 25px;
+    }
+
+    .header .icon {
+      font-size: 48px;
+    }
+
+    .header h1 {
+      margin-top: 8px;
+      font-size: 31px;
+      background: linear-gradient(90deg, #00d4ff, #8b5cf6, #00ff88);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .header p {
+      margin-top: 8px;
+      color: #b9c2d0;
+      font-size: 14px;
+    }
+
+    /* TEST SERIES */
+
+    .test-series {
+      margin-bottom: 25px;
+      padding: 22px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #451a03, #7c2d12, #4c1d95);
+      border: 1px solid rgba(255,255,255,0.18);
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .test-series h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .test-series p {
+      color: #f1f5f9;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .test-btn {
+      margin-top: 15px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.16);
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* CHAPTERS */
+
+    .section-title {
+      margin: 10px 0 15px;
+      font-size: 22px;
+      color: #7dd3fc;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .chapter {
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, #101b42, #17132f);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .chapter-number {
+      color: #93c5fd;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .chapter h2 {
+      font-size: 19px;
+      margin-bottom: 7px;
+    }
+
+    .chapter p {
+      color: #bfc9dc;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .chapter-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin-top: 15px;
+    }
+
+    .chapter-btn {
+      padding: 10px 6px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .chapter-btn:hover {
+      background: rgba(255,255,255,0.16);
+    }
+
+    /* DIFFERENT BUTTON COLORS */
+
+    .notes {
+      border-color: #0ea5e9;
+    }
+
+    .objective {
+      border-color: #22c55e;
+    }
+
+    .subjective {
+      border-color: #a855f7;
+    }
+
+    .previous {
+      border-color: #f97316;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #707b96;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+
+      body {
+        padding: 10px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 27px;
+      }
+
+      .chapter-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- BACK -->
+    <a href="class12.html" class="back">← Class 12</a>
+
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <div class="icon">⚡</div>
+
+      <h1>Class 12 Physics</h1>
+
+      <p>
+        Bihar Board • Complete Physics Study Hub
+      </p>
+
+    </div>
+
+
+    <!-- TEST SERIES -->
+
+    <div class="test-series">
+
+      <h2>🎯 Physics Test Series</h2>
+
+      <p>
+        Chapter-wise Test • Objective Test • Revision Test
+      </p>
+
+      <button class="test-btn" onclick="openTestSeries()">
+        Start Test Series →
+      </button>
+
+    </div>
+
+
+    <!-- CHAPTER SECTION -->
+
+    <h2 class="section-title">
+      📚 Physics Chapters
+    </h2>
+
+
+    <div class="chapters">
+
+
+      <!-- CHAPTER 1 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 01
+        </div>
+
+        <h2>
+          Electric Charges and Fields
+        </h2>
+
+        <p>
+          Electric charge, Coulomb's law, electric field
+          and Gauss's law.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 1 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 1 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 1 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 1 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 2 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 02
+        </div>
+
+        <h2>
+          Electrostatic Potential and Capacitance
+        </h2>
+
+        <p>
+          Electric potential, capacitors, combinations
+          and stored energy.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 2 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 2 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 2 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 2 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 3 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 03
+        </div>
+
+        <h2>
+          Current Electricity
+        </h2>
+
+        <p>
+          Current, resistance, circuits and Kirchhoff's laws.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 3 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 3 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 3 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 3 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 4 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 04
+        </div>
+
+        <h2>
+          Moving Charges and Magnetism
+        </h2>
+
+        <p>
+          Magnetic field, magnetic force and motion of charges.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 4 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 4 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 4 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 4 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 5 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 05
+        </div>
+
+        <h2>
+          Magnetism and Matter
+        </h2>
+
+        <p>
+          Magnetic properties, materials and Earth's magnetism.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 5 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 5 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 5 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 5 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 6 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 06
+        </div>
+
+        <h2>
+          Electromagnetic Induction
+        </h2>
+
+        <p>
+          Faraday's law, Lenz's law and electromagnetic induction.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 6 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 6 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 6 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 6 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 7 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 07
+        </div>
+
+        <h2>
+          Alternating Current
+        </h2>
+
+        <p>
+          AC circuits, reactance, impedance and resonance.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 7 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 7 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 7 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 7 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 8 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 08
+        </div>
+
+        <h2>
+          Electromagnetic Waves
+        </h2>
+
+        <p>
+          Electromagnetic spectrum and properties of EM waves.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 8 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 8 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 8 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 8 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 9 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 09
+        </div>
+
+        <h2>
+          Ray Optics and Optical Instruments
+        </h2>
+
+        <p>
+          Reflection, refraction, lenses and optical instruments.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 9 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 9 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 9 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 9 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 10 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 10
+        </div>
+
+        <h2>
+          Wave Optics
+        </h2>
+
+        <p>
+          Wave nature of light, interference and diffraction.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 10 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 10 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 10 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 10 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 11 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 11
+        </div>
+
+        <h2>
+          Dual Nature of Radiation and Matter
+        </h2>
+
+        <p>
+          Photoelectric effect, photons and matter waves.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 11 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 11 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 11 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 11 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 12 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 12
+        </div>
+
+        <h2>
+          Atoms
+        </h2>
+
+        <p>
+          Atomic models, Bohr model and hydrogen spectrum.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 12 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 12 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 12 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 12 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 13 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 13
+        </div>
+
+        <h2>
+          Nuclei
+        </h2>
+
+        <p>
+          Nuclear structure, radioactivity and nuclear reactions.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 13 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 13 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 13 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 13 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHAPTER 14 -->
+
+      <div class="chapter">
+
+        <div class="chapter-number">
+          CHAPTER 14
+        </div>
+
+        <h2>
+          Semiconductor Electronics
+        </h2>
+
+        <p>
+          Semiconductors, diodes, transistors and digital electronics.
+        </p>
+
+        <div class="chapter-buttons">
+
+          <button class="chapter-btn notes"
+            onclick="openContent('Chapter 14 Notes')">
+            📖 Notes
+          </button>
+
+          <button class="chapter-btn objective"
+            onclick="openContent('Chapter 14 Objective')">
+            🎯 Objective
+          </button>
+
+          <button class="chapter-btn subjective"
+            onclick="openContent('Chapter 14 Subjective')">
+            ✍️ Subjective
+          </button>
+
+          <button class="chapter-btn previous"
+            onclick="openContent('Chapter 14 Previous Questions')">
+            📷 Previous Questions
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer">
+      ⭐ PadhaiCore • Class 12 Physics
+    </div>
+
+  </div>
+
+
+  <!-- MAIN JAVASCRIPT -->
+
+  <script>
+
+    function openContent(section) {
+
+      alert(section + " section जल्द शुरू होगा!");
+
+    }
+
+
+    function openTestSeries() {
+
+      alert("Physics Test Series जल्द शुरू होगी!");
+
+    }
+
+  </script>
+
+</body>
+  </html>
