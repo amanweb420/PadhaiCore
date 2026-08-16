@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Chapter 2 Notes - PadhaiCore</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050816;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding: 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: #111a35;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #28345c;
+    }
+
+    .header {
+      text-align: center;
+      padding: 10px 10px 25px;
+    }
+
+    .header .icon {
+      font-size: 45px;
+    }
+
+    .header h1 {
+      margin-top: 8px;
+      font-size: 28px;
+      background: linear-gradient(90deg, #00d4ff, #8b5cf6, #00ff88);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .header p {
+      margin-top: 8px;
+      color: #b9c2d0;
+      font-size: 14px;
+    }
+
+    .notes-container {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .note-page {
+      background: #111a35;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1px solid #28345c;
+    }
+
+    .note-page img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .page-title {
+      text-align: center;
+      color: #7dd3fc;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #707b96;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="class12-physics.html" class="back">
+      ← Class 12 Physics
+    </a>
+
+    <div class="header">
+
+      <div class="icon">📖</div>
+
+      <h1>Chapter 2 Notes</h1>
+
+      <p>
+        Electrostatic Potential and Capacitance
+      </p>
+
+    </div>
+
+    <div class="notes-container" id="notesContainer">
+    </div>
+
+    <div class="footer">
+      ⭐ PadhaiCore • Chapter 2 Physics Notes
+    </div>
+
+  </div>
+
+
+  <script>
+
+    /* =====================================
+       📚 NOTES IMAGES
+
+       नई image जोड़ने के लिए
+       सिर्फ नीचे वाली list में नाम जोड़ना है।
+       ===================================== */
+
+    const notesImages = [
+      "page1.jpg",
+      "page2.jpg"
+    ];
+
+
+    const notesContainer =
+      document.getElementById("notesContainer");
+
+
+    notesImages.forEach((image, index) => {
+
+      const page = document.createElement("div");
+
+      page.className = "note-page";
+
+
+      page.innerHTML = `
+
+        <div class="page-title">
+          Notes Page ${index + 1}
+        </div>
+
+        <img
+          src="assets/physics/chapter2/notes/${image}"
+          alt="Chapter 2 Notes Page ${index + 1}"
+        >
+
+      `;
+
+
+      notesContainer.appendChild(page);
+
+    });
+
+  </script>
+
+</body>
+</html>
