@@ -1,20 +1,221 @@
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chapter 1 Previous Questions - PadhaiCore</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050816;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 45px;
+      padding: 12px 22px;
+      border-radius: 14px;
+      background: #111a35;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #28345c;
+      font-size: 18px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 0 10px 45px;
+    }
+
+    .icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .header h1 {
+      font-size: 34px;
+      background: linear-gradient(90deg, #10b981, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      color: #b9c2d0;
+      font-size: 18px;
+    }
+
+    .previous-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .previous-page {
+      padding: 18px;
+      border-radius: 25px;
+      background: #111a35;
+      border: 1px solid #4ade80;
+      overflow: hidden;
+    }
+
+    .page-title {
+      text-align: center;
+      color: #6ee7b7;
+      font-size: 18px;
+      padding: 0 0 15px;
+    }
+
+    .previous-page img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #68738a;
+      margin-top: 35px;
+      padding-bottom: 20px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 12px;
+      }
+
+      .back {
+        margin-bottom: 45px;
+        font-size: 18px;
+      }
+
+      .header {
+        padding-bottom: 40px;
+      }
+
+      .icon {
+        font-size: 58px;
+      }
+
+      .header h1 {
+        font-size: 31px;
+      }
+
+      .header p {
+        font-size: 17px;
+      }
+
+      .previous-page {
+        padding: 18px;
+        border-radius: 25px;
+      }
+
+      .page-title {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Chapter 1 Previous Questions</h1>
+  <div class="container">
 
-<img src="assets/physics/chapter1/previous/page1.jpg"
-     alt="Previous Questions"
-     class="question-img">
+    <!-- BACK BUTTON -->
 
-<br>
+    <a href="class12-physics.html" class="back">
+      ← Class 12 Physics
+    </a>
 
-<a href="class12-physics.html" class="back-btn">
-⬅ Back to Physics
-</a>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div class="icon">📚</div>
+
+      <h1>Chapter 1 Previous Questions</h1>
+
+      <p>Electric Charges and Fields</p>
+
+    </div>
+
+
+    <!-- PREVIOUS QUESTIONS -->
+
+    <div class="previous-container" id="previousContainer">
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      ⭐ PadhaiCore • Chapter 1 Physics Previous Questions
+    </div>
+
+  </div>
+
+
+  <script>
+
+    // ==========================================
+    // 📚 PREVIOUS QUESTIONS IMAGES
+    // नई image जोड़ने के लिए सिर्फ नीचे वाली list में
+    // image का नाम जोड़ें
+    // ==========================================
+
+    const previousImages = [
+      "page1.jpg"
+    ];
+
+
+    const previousContainer =
+      document.getElementById("previousContainer");
+
+
+    previousImages.forEach((image, index) => {
+
+      const page = document.createElement("div");
+
+      page.className = "previous-page";
+
+
+      page.innerHTML = `
+        <div class="page-title">
+          Previous Questions Page ${index + 1}
+        </div>
+
+        <img
+          src="assets/physics/chapter1/previous/${image}"
+          alt="Chapter 1 Previous Questions Page ${index + 1}"
+        >
+      `;
+
+
+      previousContainer.appendChild(page);
+
+    });
+
+  </script>
 
 </body>
 </html>
