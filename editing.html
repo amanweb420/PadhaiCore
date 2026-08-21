@@ -8,252 +8,203 @@
 
 <style>
 
-/* =====================================================
-   1. BASIC
-===================================================== */
+/* ===============================
+   BASIC
+================================ */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-body {
-  background: #050816;
-  color: white;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-  padding: 12px;
+body{
+  background:#050816;
+  color:white;
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+  padding:12px;
 }
 
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
 }
 
 
-/* =====================================================
-   2. HEADER
-===================================================== */
+/* ===============================
+   HEADER
+================================ */
 
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 15px;
+.top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:15px;
 }
 
-.back {
-  padding: 9px 15px;
-  border-radius: 10px;
-  background: #111a35;
-  color: white;
-  text-decoration: none;
-  border: 1px solid #28345c;
+.back{
+  padding:9px 15px;
+  border-radius:10px;
+  background:#111a35;
+  color:white;
+  text-decoration:none;
+  border:1px solid #28345c;
 }
 
-.title {
-  text-align: center;
-  flex: 1;
+.title{
+  flex:1;
+  text-align:center;
 }
 
-.title h1 {
-  font-size: 27px;
-  background: linear-gradient(
+.title h1{
+  font-size:27px;
+  background:linear-gradient(
     90deg,
     #00d4ff,
     #8b5cf6,
     #ff4ecd
   );
-  -webkit-background-clip: text;
-  color: transparent;
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-.title p {
-  color: #9da9c2;
-  font-size: 12px;
-  margin-top: 4px;
+.title p{
+  color:#9da9c2;
+  font-size:12px;
+  margin-top:4px;
 }
 
 
-/* =====================================================
-   3. UPLOAD
-===================================================== */
+/* ===============================
+   UPLOAD
+================================ */
 
-.upload-section {
-  background: linear-gradient(
+.upload-section{
+  background:linear-gradient(
     135deg,
     #101936,
     #19123a
   );
 
-  border: 1px solid #303d70;
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 15px;
+  border:1px solid #303d70;
+  border-radius:20px;
+  padding:20px;
 }
 
-.upload-box {
-  border: 2px dashed #46578d;
-  border-radius: 16px;
-  padding: 28px 15px;
-  text-align: center;
-  background: rgba(255,255,255,0.03);
+.upload-box{
+  border:2px dashed #46578d;
+  border-radius:16px;
+  padding:35px 15px;
+  text-align:center;
+  background:rgba(255,255,255,0.03);
 }
 
-.upload-box .icon {
-  font-size: 42px;
-  margin-bottom: 8px;
+.upload-box .icon{
+  font-size:50px;
+  margin-bottom:10px;
 }
 
-.upload-box h2 {
-  font-size: 19px;
-  margin-bottom: 6px;
+.upload-box h2{
+  font-size:20px;
+  margin-bottom:8px;
 }
 
-.upload-box p {
-  color: #aeb9ce;
-  font-size: 13px;
-  margin-bottom: 15px;
+.upload-box p{
+  color:#aeb9ce;
+  font-size:13px;
+  margin-bottom:18px;
 }
 
-.upload-btn {
-  display: inline-block;
-  padding: 11px 20px;
-  border-radius: 10px;
-  background: linear-gradient(
+.upload-btn{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:11px;
+  background:linear-gradient(
     135deg,
     #6d4aff,
     #a13cff
   );
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
 }
 
-#imageInput {
-  display: none;
-}
-
-
-/* =====================================================
-   4. EDITOR
-===================================================== */
-
-.editor {
-  display: none;
-  background: #080d20;
-  border: 1px solid #27345d;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.editor.active {
-  display: block;
+#imageInput{
+  display:none;
 }
 
 
-/* =====================================================
-   5. TOOLBAR
-===================================================== */
+/* ===============================
+   EDITOR
+================================ */
 
-.toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  padding: 12px;
-  background: #0d1429;
-  border-bottom: 1px solid #263253;
+.editor{
+  display:none;
+  margin-top:15px;
+  background:#080d20;
+  border:1px solid #27345d;
+  border-radius:20px;
+  overflow:hidden;
 }
 
-.tool-btn {
-  border: 1px solid #2b3962;
-  background: #111a35;
-  color: white;
-  border-radius: 9px;
-  padding: 9px 12px;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.tool-btn:hover {
-  background: #1c294c;
-}
-
-.tool-btn.active {
-  background: #6047d8;
-  border-color: #8b7aff;
-}
-
-.tool-btn.danger {
-  background: #3b1720;
-  border-color: #74313f;
+.editor.active{
+  display:block;
 }
 
 
-/* =====================================================
-   6. TEXT OPTIONS
-===================================================== */
+/* ===============================
+   TOOLBAR
+================================ */
 
-.text-options {
-  display: none;
-  padding: 12px;
-  background: #101936;
-  border-bottom: 1px solid #27345d;
+.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:12px;
+  background:#0d1429;
+  border-bottom:1px solid #263253;
 }
 
-.text-options.active {
-  display: block;
+.tool-btn{
+  border:1px solid #2b3962;
+  background:#111a35;
+  color:white;
+  border-radius:9px;
+  padding:9px 13px;
+  cursor:pointer;
+  font-size:13px;
 }
 
-.option-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 8px;
+.tool-btn:hover{
+  background:#1c294c;
 }
 
-.option-row:last-child {
-  margin-bottom: 0;
+.tool-btn.active{
+  background:#6047d8;
+  border-color:#9b8cff;
 }
 
-.option-title {
-  width: 100%;
-  color: #9da9c2;
-  font-size: 11px;
-  margin-bottom: 2px;
+.tool-btn.save{
+  background:#075c43;
+  border-color:#0ca678;
 }
 
-.option-btn {
-  border: 1px solid #34456f;
-  background: #0c142b;
-  color: white;
-  border-radius: 8px;
-  padding: 8px 11px;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.option-btn:hover {
-  background: #1d2b4d;
-}
-
-.option-btn.selected {
-  background: #684de0;
-  border-color: #a18cff;
+.tool-btn.close{
+  background:#451827;
+  border-color:#8c3048;
 }
 
 
-/* =====================================================
-   7. CANVAS AREA
-===================================================== */
+/* ===============================
+   CANVAS AREA
+================================ */
 
-.canvas-area {
-  width: 100%;
-  min-height: 400px;
-  padding: 15px;
+.canvas-area{
+  width:100%;
+  min-height:400px;
+  padding:15px;
 
   background:
     repeating-conic-gradient(
@@ -261,174 +212,105 @@ body {
       #0d1424 0% 50%
     ) 50% / 20px 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
 
-  overflow: auto;
+  overflow:auto;
 }
 
-.canvas-wrap {
-  position: relative;
-  display: inline-block;
-  line-height: 0;
-}
+#editorCanvas{
+  display:block;
+  max-width:100%;
+  height:auto;
 
-#editorCanvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
-
-  background: white;
+  background:white;
 
   box-shadow:
     0 10px 30px rgba(0,0,0,0.45);
 
-  touch-action: none;
+  touch-action:none;
+
+  cursor:crosshair;
 }
 
 
-/* =====================================================
-   8. TEXT INPUT
-===================================================== */
+/* ===============================
+   STATUS
+================================ */
 
-.text-input-box {
-  position: absolute;
-  display: none;
-
-  min-width: 150px;
-  max-width: 80%;
-
-  padding: 8px;
-
-  border-radius: 10px;
-  border: 2px solid #8b5cf6;
-
-  background: #080d20;
-  color: white;
-
-  z-index: 10;
-}
-
-.text-input-box.active {
-  display: block;
-}
-
-.text-input {
-  width: 100%;
-  min-height: 45px;
-
-  resize: none;
-
-  border: 1px solid #35446b;
-  border-radius: 7px;
-
-  padding: 8px;
-
-  background: #111a35;
-  color: white;
-
-  outline: none;
-  font-size: 15px;
-}
-
-.input-actions {
-  display: flex;
-  gap: 6px;
-  margin-top: 7px;
-}
-
-.input-action {
-  flex: 1;
-  border: none;
-  border-radius: 7px;
-  padding: 7px;
-  cursor: pointer;
-  color: white;
-  background: #6047d8;
-}
-
-.input-action.cancel {
-  background: #3b1720;
+.status{
+  padding:10px 14px;
+  background:#0b1225;
+  border-top:1px solid #202d50;
+  color:#9da9c2;
+  font-size:12px;
 }
 
 
-/* =====================================================
-   9. STATUS
-===================================================== */
+/* ===============================
+   FUTURE
+================================ */
 
-.status {
-  padding: 10px 14px;
-  background: #0b1225;
-  border-top: 1px solid #202d50;
-  color: #9da9c2;
-  font-size: 12px;
+.future-tools{
+  margin-top:15px;
+  padding:15px;
+  border-radius:15px;
+  background:rgba(0,212,255,0.04);
+  border:1px solid rgba(0,212,255,0.15);
+}
+
+.future-tools h3{
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+.future-tools p{
+  color:#9da9c2;
+  font-size:12px;
+  line-height:1.6;
 }
 
 
-/* =====================================================
-   10. FUTURE FEATURES
-===================================================== */
+/* ===============================
+   MOBILE
+================================ */
 
-.future-tools {
-  margin-top: 15px;
-  padding: 15px;
-  border-radius: 15px;
+@media(max-width:600px){
 
-  background: rgba(0,212,255,0.04);
-  border: 1px solid rgba(0,212,255,0.15);
-}
-
-.future-tools h3 {
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.future-tools p {
-  color: #9da9c2;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-
-/* =====================================================
-   11. MOBILE
-===================================================== */
-
-@media (max-width: 600px) {
-
-  body {
-    padding: 8px;
+  body{
+    padding:8px;
   }
 
-  .title h1 {
-    font-size: 21px;
+  .title h1{
+    font-size:21px;
   }
 
-  .title p {
-    font-size: 10px;
+  .title p{
+    font-size:10px;
   }
 
-  .back {
-    font-size: 12px;
-    padding: 8px 10px;
+  .back{
+    font-size:12px;
+    padding:8px 10px;
   }
 
-  .tool-btn {
-    flex: 1;
-    min-width: 75px;
-    font-size: 11px;
-    padding: 8px 5px;
+  .toolbar{
+    gap:6px;
   }
 
-  .option-btn {
-    flex: 1;
+  .tool-btn{
+    flex:1;
+    min-width:75px;
+    font-size:11px;
+    padding:9px 5px;
   }
 
-  .canvas-area {
-    min-height: 300px;
-    padding: 8px;
+  .canvas-area{
+    min-height:300px;
+    padding:8px;
   }
+
 }
 
 </style>
@@ -440,9 +322,9 @@ body {
 <div class="container">
 
 
-<!-- =====================================================
+<!-- ===============================
      HEADER
-===================================================== -->
+================================ -->
 
 <div class="top">
 
@@ -455,19 +337,17 @@ body {
     <h1>✏️ Editing Studio</h1>
 
     <p>
-      PadhaiCore • Notes Editing
+      PadhaiCore • Notes & Photo Editor
     </p>
 
   </div>
 
-  <div style="width:55px;"></div>
-
 </div>
 
 
-<!-- =====================================================
-     UPLOAD
-===================================================== -->
+<!-- ===============================
+     UPLOAD SECTION
+================================ -->
 
 <section
   class="upload-section"
@@ -484,8 +364,7 @@ body {
     </h2>
 
     <p>
-      Photo upload करके Notes में
-      correction और text जोड़ें।
+      Photo upload करके उसे यहाँ edit करें।
     </p>
 
     <label
@@ -506,88 +385,45 @@ body {
 </section>
 
 
-<!-- =====================================================
+<!-- ===============================
      EDITOR
-===================================================== -->
+================================ -->
 
 <section
   class="editor"
   id="editor">
 
 
-<!-- MAIN TOOLBAR -->
+<!-- TOOLBAR -->
 
 <div class="toolbar">
 
   <button
-    class="tool-btn"
-    id="textToolBtn"
-    onclick="activateTextTool()">
+    class="tool-btn active"
+    id="penBtn"
+    onclick="setTool('pen')">
 
-    🔤 Text
-
-  </button>
-
-
-  <button
-    class="tool-btn"
-    onclick="setHeadingMode()">
-
-    📝 Heading
+    ✏️ Pen
 
   </button>
 
 
   <button
     class="tool-btn"
-    onclick="toggleBold()">
+    id="highlightBtn"
+    onclick="setTool('highlight')">
 
-    <b>B</b> Bold
-
-  </button>
-
-
-  <button
-    class="tool-btn"
-    onclick="toggleUnderline()">
-
-    <u>U</u> Underline
+    🖍️ Highlight
 
   </button>
 
 
   <button
     class="tool-btn"
-    onclick="increaseTextSize()">
+    id="eraserBtn"
+    onclick="setTool('eraser')">
 
-    🔺 Big
-
-  </button>
-
-
-  <button
-    class="tool-btn"
-    onclick="decreaseTextSize()">
-
-    🔻 Small
-
-  </button>
-
-
-  <button
-    class="tool-btn"
-    onclick="setHighlight()">
-
-    🟨 Highlight
-
-  </button>
-
-
-  <button
-    class="tool-btn"
-    onclick="setImportant()">
-
-    ⭐ Important
+    🧽 Eraser
 
   </button>
 
@@ -603,6 +439,15 @@ body {
 
   <button
     class="tool-btn"
+    onclick="redoEdit()">
+
+    ↪️ Redo
+
+  </button>
+
+
+  <button
+    class="tool-btn"
     onclick="resetImage()">
 
     🔄 Reset
@@ -611,7 +456,7 @@ body {
 
 
   <button
-    class="tool-btn"
+    class="tool-btn save"
     onclick="downloadImage()">
 
     💾 Save
@@ -620,7 +465,7 @@ body {
 
 
   <button
-    class="tool-btn danger"
+    class="tool-btn close"
     onclick="closeEditor()">
 
     ✕ Close
@@ -630,182 +475,13 @@ body {
 </div>
 
 
-<!-- =====================================================
-     TEXT OPTIONS
-===================================================== -->
-
-<div
-  class="text-options"
-  id="textOptions">
-
-
-  <div class="option-row">
-
-    <div class="option-title">
-      🎨 Text Color
-    </div>
-
-    <button
-      class="option-btn selected"
-      onclick="setTextColor('#111827')">
-
-      ⚫ Black
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setTextColor('#ffffff')">
-
-      ⚪ White
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setTextColor('#2563eb')">
-
-      🔵 Blue
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setTextColor('#dc2626')">
-
-      🔴 Red
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setTextColor('#16a34a')">
-
-      🟢 Green
-
-    </button>
-
-  </div>
-
-
-  <div class="option-row">
-
-    <div class="option-title">
-      📝 Heading Design
-    </div>
-
-    <button
-      class="option-btn"
-      onclick="setHeadingStyle('simple')">
-
-      Simple
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setHeadingStyle('underline')">
-
-      Underline
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setHeadingStyle('box')">
-
-      Box
-
-    </button>
-
-  </div>
-
-
-  <div class="option-row">
-
-    <div class="option-title">
-      🟨 Highlight
-    </div>
-
-    <button
-      class="option-btn"
-      onclick="setHighlightColor('#fff176')">
-
-      Yellow
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setHighlightColor('#81d4fa')">
-
-      Blue
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setHighlightColor('#a5d6a7')">
-
-      Green
-
-    </button>
-
-    <button
-      class="option-btn"
-      onclick="setHighlightColor('#f8bbd0')">
-
-      Pink
-
-    </button>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================================
-     CANVAS
-===================================================== -->
+<!-- CANVAS -->
 
 <div class="canvas-area">
 
-  <div class="canvas-wrap">
-
-    <canvas id="editorCanvas"></canvas>
-
-    <div
-      class="text-input-box"
-      id="textInputBox">
-
-      <textarea
-        class="text-input"
-        id="textInput"
-        placeholder="यहाँ नया शब्द / text लिखें..."></textarea>
-
-      <div class="input-actions">
-
-        <button
-          class="input-action"
-          onclick="applyText()">
-
-          ✓ Apply
-
-        </button>
-
-        <button
-          class="input-action cancel"
-          onclick="cancelText()">
-
-          Cancel
-
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
+  <canvas
+    id="editorCanvas">
+  </canvas>
 
 </div>
 
@@ -816,28 +492,32 @@ body {
   class="status"
   id="status">
 
-  Photo ready • Text tool चुनकर photo पर touch करें।
+  Photo upload करें।
 
 </div>
-
 
 </section>
 
 
-<!-- =====================================================
-     FUTURE
-===================================================== -->
+<!-- ===============================
+     FUTURE FEATURES
+================================ -->
 
 <div class="future-tools">
 
   <h3>
-    🚀 Future Features
+    🚀 आगे के Features
   </h3>
 
   <p>
-    Smart Text Replace • Exact Style Match • OCR •
-    Crop • Shapes • Advanced Color Picker •
-    More Heading Designs • और भी features
+
+    Smart Text Replace • Style Match •
+    Text Tool • Heading Style •
+    Bold • Small/Large Text •
+    Underline • Important Box •
+    Crop • Color Picker • OCR •
+    और बहुत कुछ
+
   </p>
 
 </div>
@@ -848,24 +528,23 @@ body {
 
 <script>
 
-/* =========================================================
-   PadhaiCore EDITING SYSTEM
-   Modular Base
-========================================================= */
+/* =================================================
+   PADHAICORE EDITING STUDIO
+================================================= */
 
 
-/* =========================================================
-   1. BASIC VARIABLES
-========================================================= */
+/* ===============================
+   ELEMENTS
+================================ */
 
 const imageInput =
   document.getElementById("imageInput");
 
-const editor =
-  document.getElementById("editor");
-
 const uploadSection =
   document.getElementById("uploadSection");
+
+const editor =
+  document.getElementById("editor");
 
 const canvas =
   document.getElementById("editorCanvas");
@@ -876,50 +555,59 @@ const ctx =
 const status =
   document.getElementById("status");
 
-const textOptions =
-  document.getElementById("textOptions");
 
-const textInputBox =
-  document.getElementById("textInputBox");
-
-const textInput =
-  document.getElementById("textInput");
-
+/* ===============================
+   VARIABLES
+================================ */
 
 let originalImage = null;
 
+let currentTool = "pen";
+
+let isDrawing = false;
+
 let undoStack = [];
 
-let currentTool = "text";
-
-let textColor = "#111827";
-
-let textSize = 28;
-
-let textBold = false;
-
-let textUnderline = false;
-
-let highlightColor = "#fff176";
-
-let headingStyle = "simple";
-
-let selectedX = 0;
-
-let selectedY = 0;
+let redoStack = [];
 
 
-/* =========================================================
-   2. PHOTO UPLOAD
-========================================================= */
+/* ===============================
+   UPLOAD PHOTO
+================================ */
 
 imageInput.addEventListener(
   "change",
-  function () {
+  function(){
 
-    const file = this.files[0];
+    const file =
+      this.files &&
+      this.files[0];
 
-    if (!file) return;
+    if(!file){
+
+      setStatus(
+        "❌ Photo select नहीं हुई"
+      );
+
+      return;
+
+    }
+
+
+    if(!file.type.startsWith("image/")){
+
+      setStatus(
+        "❌ केवल image file चुनें"
+      );
+
+      return;
+
+    }
+
+
+    setStatus(
+      "⏳ Photo load हो रही है..."
+    );
 
 
     const reader =
@@ -927,17 +615,19 @@ imageInput.addEventListener(
 
 
     reader.onload =
-      function(event) {
+      function(event){
 
         const img =
           new Image();
 
 
         img.onload =
-          function() {
+          function(){
 
             originalImage = img;
 
+
+            /* Canvas size */
 
             canvas.width =
               img.naturalWidth;
@@ -946,13 +636,17 @@ imageInput.addEventListener(
               img.naturalHeight;
 
 
+            /* Draw photo */
+
+            ctx.globalCompositeOperation =
+              "source-over";
+
             ctx.clearRect(
               0,
               0,
               canvas.width,
               canvas.height
             );
-
 
             ctx.drawImage(
               img,
@@ -961,22 +655,41 @@ imageInput.addEventListener(
             );
 
 
+            /* History reset */
+
             undoStack = [];
+
+            redoStack = [];
+
 
             saveHistory();
 
+
+            /* Show editor */
+
+            uploadSection.style.display =
+              "none";
 
             editor.classList.add(
               "active"
             );
 
 
-            uploadSection.style.display =
-              "none";
+            setTool("pen");
 
 
             setStatus(
-              "Photo loaded • Text tool ready"
+              "✅ Photo ready • Pen selected"
+            );
+
+          };
+
+
+        img.onerror =
+          function(){
+
+            setStatus(
+              "❌ Photo load नहीं हो सकी"
             );
 
           };
@@ -988,119 +701,431 @@ imageInput.addEventListener(
       };
 
 
+    reader.onerror =
+      function(){
+
+        setStatus(
+          "❌ File पढ़ने में समस्या हुई"
+        );
+
+      };
+
+
     reader.readAsDataURL(file);
 
   }
 );
 
 
-/* =========================================================
-   3. TEXT TOOL
-========================================================= */
+/* ===============================
+   TOOL SELECT
+================================ */
 
-function activateTextTool() {
+function setTool(tool){
 
-  currentTool = "text";
+  currentTool =
+    tool;
 
-  textOptions.classList.add(
-    "active"
-  );
 
-  setStatus(
-    "🔤 Photo पर जहाँ text डालना है वहाँ touch करें"
+  /* Remove active */
+
+  document
+    .querySelectorAll(".tool-btn")
+    .forEach(function(btn){
+
+      btn.classList.remove(
+        "active"
+      );
+
+    });
+
+
+  /* Pen */
+
+  if(tool === "pen"){
+
+    ctx.globalCompositeOperation =
+      "source-over";
+
+    ctx.strokeStyle =
+      "#ff1744";
+
+    ctx.lineWidth =
+      5;
+
+    ctx.lineCap =
+      "round";
+
+    ctx.lineJoin =
+      "round";
+
+
+    document
+      .getElementById("penBtn")
+      .classList.add("active");
+
+
+    setStatus(
+      "✏️ Pen • Photo पर लिखें"
+    );
+
+  }
+
+
+  /* Highlight */
+
+  if(tool === "highlight"){
+
+    ctx.globalCompositeOperation =
+      "source-over";
+
+    ctx.strokeStyle =
+      "rgba(255,235,59,0.45)";
+
+    ctx.lineWidth =
+      22;
+
+    ctx.lineCap =
+      "round";
+
+
+    document
+      .getElementById("highlightBtn")
+      .classList.add("active");
+
+
+    setStatus(
+      "🖍️ Highlight • Text पर mark करें"
+    );
+
+  }
+
+
+  /* Eraser */
+
+  if(tool === "eraser"){
+
+    ctx.globalCompositeOperation =
+      "destination-out";
+
+    ctx.lineWidth =
+      30;
+
+    ctx.lineCap =
+      "round";
+
+
+    document
+      .getElementById("eraserBtn")
+      .classList.add("active");
+
+
+    setStatus(
+      "🧽 Eraser • Drawing हटाएँ"
+    );
+
+  }
+
+}
+
+
+/* ===============================
+   POSITION
+================================ */
+
+function getPosition(event){
+
+  const rect =
+    canvas.getBoundingClientRect();
+
+
+  const scaleX =
+    canvas.width /
+    rect.width;
+
+  const scaleY =
+    canvas.height /
+    rect.height;
+
+
+  let clientX;
+
+  let clientY;
+
+
+  if(event.touches){
+
+    clientX =
+      event.touches[0].clientX;
+
+    clientY =
+      event.touches[0].clientY;
+
+  }
+
+  else{
+
+    clientX =
+      event.clientX;
+
+    clientY =
+      event.clientY;
+
+  }
+
+
+  return{
+
+    x:
+      (clientX - rect.left)
+      * scaleX,
+
+    y:
+      (clientY - rect.top)
+      * scaleY
+
+  };
+
+}
+
+
+/* ===============================
+   START DRAWING
+================================ */
+
+function startDrawing(event){
+
+  event.preventDefault();
+
+
+  if(!canvas.width){
+
+    return;
+
+  }
+
+
+  isDrawing = true;
+
+
+  const pos =
+    getPosition(event);
+
+
+  ctx.beginPath();
+
+  ctx.moveTo(
+    pos.x,
+    pos.y
   );
 
 }
 
 
-/* =========================================================
-   4. CANVAS TOUCH / CLICK
-========================================================= */
+/* ===============================
+   DRAW
+================================ */
 
-canvas.addEventListener(
-  "click",
-  function(event) {
+function draw(event){
 
-    if (
-      currentTool !== "text" &&
-      currentTool !== "heading"
-    ) {
-      return;
-    }
+  if(!isDrawing){
 
-
-    const rect =
-      canvas.getBoundingClientRect();
-
-
-    const scaleX =
-      canvas.width /
-      rect.width;
-
-
-    const scaleY =
-      canvas.height /
-      rect.height;
-
-
-    selectedX =
-      (event.clientX - rect.left)
-      * scaleX;
-
-
-    selectedY =
-      (event.clientY - rect.top)
-      * scaleY;
-
-
-    /* Input box को screen position पर दिखाना */
-
-    const displayX =
-      event.clientX -
-      canvas.getBoundingClientRect().left;
-
-    const displayY =
-      event.clientY -
-      canvas.getBoundingClientRect().top;
-
-
-    textInputBox.style.left =
-      displayX + "px";
-
-    textInputBox.style.top =
-      displayY + "px";
-
-
-    textInputBox.classList.add(
-      "active"
-    );
-
-
-    textInput.focus();
-
-
-    setStatus(
-      "⌨️ अब नया word/text लिखें"
-    );
+    return;
 
   }
+
+
+  event.preventDefault();
+
+
+  const pos =
+    getPosition(event);
+
+
+  ctx.lineTo(
+    pos.x,
+    pos.y
+  );
+
+  ctx.stroke();
+
+}
+
+
+/* ===============================
+   STOP DRAWING
+================================ */
+
+function stopDrawing(event){
+
+  if(!isDrawing){
+
+    return;
+
+  }
+
+
+  if(event){
+
+    event.preventDefault();
+
+  }
+
+
+  isDrawing = false;
+
+  ctx.closePath();
+
+
+  saveHistory();
+
+}
+
+
+/* ===============================
+   MOUSE
+================================ */
+
+canvas.addEventListener(
+  "mousedown",
+  startDrawing
+);
+
+canvas.addEventListener(
+  "mousemove",
+  draw
+);
+
+canvas.addEventListener(
+  "mouseup",
+  stopDrawing
+);
+
+canvas.addEventListener(
+  "mouseleave",
+  stopDrawing
 );
 
 
-/* =========================================================
-   5. APPLY TEXT
-========================================================= */
+/* ===============================
+   MOBILE TOUCH
+================================ */
 
-function applyText() {
+canvas.addEventListener(
+  "touchstart",
+  startDrawing,
+  {passive:false}
+);
 
-  const value =
-    textInput.value.trim();
+canvas.addEventListener(
+  "touchmove",
+  draw,
+  {passive:false}
+);
+
+canvas.addEventListener(
+  "touchend",
+  stopDrawing,
+  {passive:false}
+);
 
 
-  if (!value) {
+/* ===============================
+   HISTORY
+================================ */
+
+function saveHistory(){
+
+  try{
+
+    const imageData =
+      canvas.toDataURL(
+        "image/png"
+      );
+
+
+    undoStack.push(
+      imageData
+    );
+
+
+    if(
+      undoStack.length > 20
+    ){
+
+      undoStack.shift();
+
+    }
+
+
+    redoStack = [];
+
+  }
+
+  catch(error){
+
+    console.log(
+      "History error:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ===============================
+   RESTORE
+================================ */
+
+function restoreState(data){
+
+  const img =
+    new Image();
+
+
+  img.onload =
+    function(){
+
+      ctx.globalCompositeOperation =
+        "source-over";
+
+
+      ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+
+      ctx.drawImage(
+        img,
+        0,
+        0
+      );
+
+    };
+
+
+  img.src =
+    data;
+
+}
+
+
+/* ===============================
+   UNDO
+================================ */
+
+function undoEdit(){
+
+  if(
+    undoStack.length <= 1
+  ){
 
     setStatus(
-      "पहले text लिखें"
+      "↩️ Nothing to undo"
     );
 
     return;
@@ -1108,322 +1133,254 @@ function applyText() {
   }
 
 
-  ctx.save();
+  const current =
+    undoStack.pop();
 
 
-  /* Highlight */
-
-  if (
-    currentTool === "heading" ||
-    headingStyle === "box"
-  ) {
-
-    if (
-      headingStyle === "box"
-    ) {
-
-      const width =
-        Math.max(
-          180,
-          value.length *
-          (textSize * 0.55)
-        );
-
-
-      ctx.fillStyle =
-        "rgba(139,92,246,0.20)";
-
-
-      ctx.fillRect(
-        selectedX - 10,
-        selectedY - textSize,
-        width,
-        textSize + 16
-      );
-
-    }
-
-  }
-
-
-  /* Highlight behind text */
-
-  if (
-    currentTool === "highlight"
-  ) {
-
-    ctx.fillStyle =
-      highlightColor;
-
-
-    const width =
-      Math.max(
-        100,
-        value.length *
-        (textSize * 0.55)
-      );
-
-
-    ctx.fillRect(
-      selectedX - 5,
-      selectedY - textSize + 5,
-      width,
-      textSize + 8
-    );
-
-  }
-
-
-  /* Font */
-
-  let fontStyle =
-    textBold ? "bold " : "";
-
-  fontStyle +=
-    textSize +
-    "px Arial";
-
-
-  ctx.font =
-    fontStyle;
-
-
-  ctx.fillStyle =
-    textColor;
-
-
-  ctx.textBaseline =
-    "alphabetic";
-
-
-  ctx.fillText(
-    value,
-    selectedX,
-    selectedY
+  redoStack.push(
+    current
   );
 
 
-  /* Underline */
-
-  if (textUnderline) {
-
-    const textWidth =
-      ctx.measureText(
-        value
-      ).width;
+  const previous =
+    undoStack[
+      undoStack.length - 1
+    ];
 
 
-    ctx.beginPath();
+  restoreState(
+    previous
+  );
 
 
-    ctx.strokeStyle =
-      textColor;
+  setStatus(
+    "↩️ Undo किया गया"
+  );
 
-    ctx.lineWidth =
-      Math.max(
-        1,
-        textSize / 14
-      );
+}
 
 
-    ctx.moveTo(
-      selectedX,
-      selectedY + 4
+/* ===============================
+   REDO
+================================ */
+
+function redoEdit(){
+
+  if(
+    redoStack.length === 0
+  ){
+
+    setStatus(
+      "↪️ Nothing to redo"
     );
 
-
-    ctx.lineTo(
-      selectedX + textWidth,
-      selectedY + 4
-    );
-
-
-    ctx.stroke();
+    return;
 
   }
 
 
-  /* Heading underline */
-
-  if (
-    currentTool === "heading" &&
-    headingStyle === "underline"
-  ) {
-
-    const textWidth =
-      ctx.measureText(
-        value
-      ).width;
+  const next =
+    redoStack.pop();
 
 
-    ctx.beginPath();
+  undoStack.push(
+    next
+  );
 
 
-    ctx.strokeStyle =
-      textColor;
-
-    ctx.lineWidth = 3;
-
-
-    ctx.moveTo(
-      selectedX,
-      selectedY + 8
-    );
+  restoreState(
+    next
+  );
 
 
-    ctx.lineTo(
-      selectedX + textWidth,
-      selectedY + 8
-    );
+  setStatus(
+    "↪️ Redo किया गया"
+  );
+
+}
 
 
-    ctx.stroke();
+/* ===============================
+   RESET
+================================ */
+
+function resetImage(){
+
+  if(!originalImage){
+
+    return;
 
   }
 
 
-  ctx.restore();
+  ctx.globalCompositeOperation =
+    "source-over";
+
+
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+
+  ctx.drawImage(
+    originalImage,
+    0,
+    0
+  );
+
+
+  undoStack = [];
+
+  redoStack = [];
 
 
   saveHistory();
 
 
-  textInput.value = "";
-
-  textInputBox.classList.remove(
-    "active"
+  setTool(
+    currentTool
   );
 
 
   setStatus(
-    "✅ Text added"
+    "🔄 Original photo वापस आ गई"
   );
 
 }
 
 
-/* =========================================================
-   6. CANCEL TEXT
-========================================================= */
+/* ===============================
+   SAVE
+================================ */
 
-function cancelText() {
+function downloadImage(){
 
-  textInput.value = "";
+  if(!canvas.width){
 
-  textInputBox.classList.remove(
-    "active"
-  );
+    setStatus(
+      "❌ पहले Photo upload करें"
+    );
 
+    return;
 
-  setStatus(
-    "Text cancelled"
-  );
-
-}
-
-
-/* =========================================================
-   7. HEADING MODE
-========================================================= */
-
-function setHeadingMode() {
-
-  currentTool = "heading";
-
-  textOptions.classList.add(
-    "active"
-  );
-
-
-  textSize = 38;
-
-  textBold = true;
-
-
-  setStatus(
-    "📝 Heading mode • Design चुनकर photo पर touch करें"
-  );
-
-}
-
-
-/* =========================================================
-   8. BOLD
-========================================================= */
-
-function toggleBold() {
-
-  textBold =
-    !textBold;
-
-
-  setStatus(
-    textBold
-      ? "B Bold ON"
-      : "B Bold OFF"
-  );
-
-}
-
-
-/* =========================================================
-   9. UNDERLINE
-========================================================= */
-
-function toggleUnderline() {
-
-  textUnderline =
-    !textUnderline;
-
-
-  setStatus(
-    textUnderline
-      ? "U Underline ON"
-      : "U Underline OFF"
-  );
-
-}
-
-
-/* =========================================================
-   10. TEXT SIZE
-========================================================= */
-
-function increaseTextSize() {
-
-  textSize += 4;
-
-
-  if (textSize > 90) {
-    textSize = 90;
   }
 
 
+  const link =
+    document.createElement("a");
+
+
+  link.download =
+    "PadhaiCore-Edited-Notes.png";
+
+
+  link.href =
+    canvas.toDataURL(
+      "image/png"
+    );
+
+
+  document.body.appendChild(
+    link
+  );
+
+
+  link.click();
+
+
+  document.body.removeChild(
+    link
+  );
+
+
   setStatus(
-    "🔺 Text size: " +
-    textSize
+    "💾 Edited photo save हो गई"
   );
 
 }
 
 
-function decreaseTextSize() {
+/* ===============================
+   CLOSE
+================================ */
 
-  textSize -= 4;
+function closeEditor(){
+
+  editor.classList.remove(
+    "active"
+  );
 
 
-  if (textSize < 12) {
-    textSize = 12;
-  }
+  uploadSection.style.display =
+    "block";
+
+
+  imageInput.value =
+    "";
+
+
+  originalImage =
+    null;
+
+
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+
+  undoStack = [];
+
+  redoStack = [];
 
 
   setStatus(
-    "🔻 Text size: " +
-    textSize
+    "Editor बंद है"
   );
 
 }
 
 
-/* =========================================================
-   11. 
+/* ===============================
+   STATUS
+================================ */
+
+function setStatus(message){
+
+  status.textContent =
+    message;
+
+}
+
+
+/* =================================================
+   FUTURE FEATURES
+=================================================
+
+   आगे नए features यहीं अलग functions में जोड़ेंगे:
+
+   • Smart Text Replace
+   • Style Match
+   • Text Tool
+   • Heading Design
+   • Bold / Small / Large
+   • Underline
+   • Important Point
+   • Crop
+   • Color Picker
+   • OCR
+   • Advanced Save
+
+   पुराने system को बिना जरूरत नहीं बदलना है।
+
+================================================= */
+
+</script>
+
+</body>
+</html>
