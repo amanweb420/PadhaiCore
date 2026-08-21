@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Editing - PadhaiCore</title>
+  <title>Editing Studio - PadhaiCore</title>
 
   <style>
+    /* =====================================================
+       1. BASIC SETUP
+    ===================================================== */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -18,36 +22,30 @@
       color: white;
       font-family: Arial, sans-serif;
       min-height: 100vh;
-      padding: 20px;
+      padding: 12px;
     }
 
     .container {
-      max-width: 900px;
+      width: 100%;
+      max-width: 1100px;
       margin: auto;
     }
 
-    .header {
-      text-align: center;
-      padding: 25px 10px;
-    }
 
-    .header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-      background: linear-gradient(90deg, #00d4ff, #8b5cf6, #ff4ecd);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+    /* =====================================================
+       2. HEADER
+    ===================================================== */
 
-    .header p {
-      color: #b9c2d0;
-      font-size: 15px;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
     .back {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 18px;
+      padding: 9px 15px;
       border-radius: 10px;
       background: #111a35;
       color: white;
@@ -55,50 +53,80 @@
       border: 1px solid #28345c;
     }
 
-    .editor-card {
-      padding: 25px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #101936, #19123a);
+    .title {
+      text-align: center;
+      flex: 1;
+    }
+
+    .title h1 {
+      font-size: 27px;
+      background: linear-gradient(
+        90deg,
+        #00d4ff,
+        #8b5cf6,
+        #ff4ecd
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .title p {
+      color: #9da9c2;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+
+    /* =====================================================
+       3. UPLOAD AREA
+    ===================================================== */
+
+    .upload-section {
+      background: linear-gradient(
+        135deg,
+        #101936,
+        #19123a
+      );
+
       border: 1px solid #303d70;
-    }
-
-    .editor-card h2 {
-      margin-bottom: 10px;
-    }
-
-    .editor-card p {
-      color: #bdc7dd;
-      line-height: 1.6;
-      font-size: 14px;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 15px;
     }
 
     .upload-box {
-      margin-top: 22px;
-      padding: 35px 20px;
       border: 2px dashed #46578d;
-      border-radius: 18px;
+      border-radius: 16px;
+      padding: 25px 15px;
       text-align: center;
       background: rgba(255,255,255,0.03);
     }
 
     .upload-box .icon {
-      font-size: 50px;
-      margin-bottom: 12px;
-    }
-
-    .upload-box h3 {
+      font-size: 42px;
       margin-bottom: 8px;
     }
 
+    .upload-box h2 {
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
     .upload-box p {
-      margin-bottom: 18px;
+      color: #aeb9ce;
+      font-size: 13px;
+      margin-bottom: 15px;
     }
 
     .upload-btn {
       display: inline-block;
-      padding: 11px 20px;
+      padding: 11px 18px;
       border-radius: 10px;
-      background: linear-gradient(135deg, #6d4aff, #a13cff);
+      background: linear-gradient(
+        135deg,
+        #6d4aff,
+        #a13cff
+      );
       color: white;
       cursor: pointer;
       font-weight: bold;
@@ -108,147 +136,996 @@
       display: none;
     }
 
-    .tools {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 20px;
+
+    /* =====================================================
+       4. EDITOR
+    ===================================================== */
+
+    .editor {
+      display: none;
+      background: #080d20;
+      border: 1px solid #27345d;
+      border-radius: 20px;
+      overflow: hidden;
     }
 
-    .tool {
-      padding: 15px;
-      border-radius: 14px;
-      background: #0d1429;
-      border: 1px solid #202d50;
-      text-align: center;
-      color: #cbd5e1;
-    }
-
-    .tool span {
+    .editor.active {
       display: block;
-      font-size: 25px;
-      margin-bottom: 7px;
     }
 
-    .note {
-      margin-top: 18px;
-      padding: 15px;
-      border-radius: 13px;
-      background: rgba(0,212,255,0.07);
-      border: 1px solid rgba(0,212,255,0.2);
-      color: #bcd4e5;
-      font-size: 13px;
-      line-height: 1.5;
+
+    /* =====================================================
+       5. TOOLBAR
+    ===================================================== */
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px;
+      background: #0d1429;
+      border-bottom: 1px solid #263253;
     }
+
+    .tool-btn {
+      border: 1px solid #2b3962;
+      background: #111a35;
+      color: white;
+      border-radius: 9px;
+      padding: 9px 12px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .tool-btn:hover {
+      background: #1c294c;
+    }
+
+    .tool-btn.active {
+      background: #6047d8;
+      border-color: #8b7aff;
+    }
+
+    .tool-btn.danger {
+      background: #3b1720;
+      border-color: #74313f;
+    }
+
+
+    /* =====================================================
+       6. CANVAS AREA
+    ===================================================== */
+
+    .canvas-area {
+      width: 100%;
+      min-height: 400px;
+      padding: 15px;
+      background:
+        repeating-conic-gradient(
+          #111827 0% 25%,
+          #0d1424 0% 50%
+        ) 50% / 20px 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      overflow: auto;
+    }
+
+    #editorCanvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      background: white;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.45);
+
+      touch-action: none;
+    }
+
+
+    /* =====================================================
+       7. STATUS
+    ===================================================== */
+
+    .status {
+      padding: 10px 14px;
+      background: #0b1225;
+      border-top: 1px solid #202d50;
+      color: #9da9c2;
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       8. FUTURE FEATURES AREA
+    ===================================================== */
+
+    .future-tools {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      background: rgba(0,212,255,0.04);
+      border: 1px solid rgba(0,212,255,0.15);
+    }
+
+    .future-tools h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .future-tools p {
+      color: #9da9c2;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       9. MOBILE
+    ===================================================== */
 
     @media (max-width: 600px) {
 
       body {
-        padding: 12px;
+        padding: 8px;
       }
 
-      .header h1 {
-        font-size: 27px;
+      .top {
+        align-items: flex-start;
       }
 
-      .tools {
-        grid-template-columns: 1fr;
+      .title h1 {
+        font-size: 21px;
+      }
+
+      .title p {
+        font-size: 10px;
+      }
+
+      .back {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      .tool-btn {
+        flex: 1;
+        min-width: 75px;
+        font-size: 11px;
+        padding: 8px 5px;
+      }
+
+      .canvas-area {
+        min-height: 300px;
+        padding: 8px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <a href="index.html" class="back">← Home</a>
 
-    <div class="header">
-      <h1>✏️ Editing</h1>
-      <p>Edit • Highlight • Mark • Save</p>
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <div class="top">
+
+    <a href="index.html" class="back">
+      ← Home
+    </a>
+
+    <div class="title">
+      <h1>✏️ Editing Studio</h1>
+      <p>PadhaiCore • Notes & Photo Editor</p>
     </div>
 
-    <div class="editor-card">
-
-      <h2>📝 Notes Editing Studio</h2>
-
-      <p>
-        अपनी notes या किसी page की photo upload करके
-        उसे original image की तरह देखकर आगे manually
-        highlight, mark और edit करने का system यहाँ बनाया जाएगा।
-      </p>
-
-      <div class="upload-box">
-
-        <div class="icon">🖼️</div>
-
-        <h3>अपनी Photo चुनें</h3>
-
-        <p>
-          Original photo को बिना OCR में बदलने के
-          editing area में दिखाया जाएगा।
-        </p>
-
-        <label for="imageInput" class="upload-btn">
-          📷 Choose Photo
-        </label>
-
-        <input
-          type="file"
-          id="imageInput"
-          accept="image/*"
-        >
-
-      </div>
-
-      <div class="tools">
-
-        <div class="tool">
-          <span>✏️</span>
-          Manual Edit
-        </div>
-
-        <div class="tool">
-          <span>🖍️</span>
-          Highlight
-        </div>
-
-        <div class="tool">
-          <span>💾</span>
-          Save
-        </div>
-
-      </div>
-
-      <div class="note">
-        ℹ️ अभी यह पहला Editing setup है। अगली stage में
-        photo को full-screen दिखाकर उस पर manually
-        लिखने, highlight करने और correction करने का
-        actual editor बनाया जाएगा।
-      </div>
-
-    </div>
+    <div style="width:55px;"></div>
 
   </div>
 
-  <script>
 
-    const imageInput = document.getElementById("imageInput");
 
-    imageInput.addEventListener("change", function () {
+  <!-- =====================================================
+       UPLOAD
+  ====================================================== -->
 
-      if (this.files && this.files[0]) {
+  <section class="upload-section" id="uploadSection">
 
-        alert(
-          "Photo select हो गई है। अगली stage में इसी photo को editing area में दिखाया जाएगा।"
+    <div class="upload-box">
+
+      <div class="icon">🖼️</div>
+
+      <h2>अपनी Notes Photo चुनें</h2>
+
+      <p>
+        Photo upload करके उसे Editing Studio में edit करें।
+      </p>
+
+      <label
+        for="imageInput"
+        class="upload-btn">
+        📷 Choose Photo
+      </label>
+
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*">
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       EDITOR
+  ====================================================== -->
+
+  <section class="editor" id="editor">
+
+
+    <!-- TOOLBAR -->
+
+    <div class="toolbar">
+
+      <button
+        class="tool-btn"
+        onclick="setTool('pen')">
+        ✏️ Pen
+      </button>
+
+      <button
+        class="tool-btn"
+        onclick="setTool('highlight')">
+        🖍️ Highlight
+      </button>
+
+      <button
+        class="tool-btn"
+        onclick="setTool('eraser')">
+        🧽 Eraser
+      </button>
+
+      <button
+        class="tool-btn"
+        onclick="undoEdit()">
+        ↩️ Undo
+      </button>
+
+      <button
+        class="tool-btn"
+        onclick="redoEdit()">
+        ↪️ Redo
+      </button>
+
+      <button
+        class="tool-btn"
+        onclick="resetImage()">
+        🔄 Reset
+      </button>
+
+      <button
+        class="tool-btn"
+        onclick="downloadImage()">
+        💾 Save
+      </button>
+
+      <button
+        class="tool-btn danger"
+        onclick="closeEditor()">
+        ✕ Close
+      </button>
+
+    </div>
+
+
+    <!-- CANVAS -->
+
+    <div class="canvas-area">
+
+      <canvas id="editorCanvas"></canvas>
+
+    </div>
+
+
+    <!-- STATUS -->
+
+    <div class="status" id="status">
+      Photo ready • Tool: Pen
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FUTURE FEATURES
+  ====================================================== -->
+
+  <div class="future-tools">
+
+    <h3>🚀 आगे आने वाले Features</h3>
+
+    <p>
+      Smart Text Replace • Style Match • Text Tool • Crop •
+      Shapes • Color Picker • Font Size • Highlight Color •
+      Undo/Redo History • OCR • और भी बहुत कुछ
+    </p>
+
+  </div>
+
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   EDITING SYSTEM
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. BASIC VARIABLES
+--------------------------------------------------------- */
+
+const imageInput =
+  document.getElementById("imageInput");
+
+const editor =
+  document.getElementById("editor");
+
+const canvas =
+  document.getElementById("editorCanvas");
+
+const ctx =
+  canvas.getContext("2d");
+
+const status =
+  document.getElementById("status");
+
+
+let originalImage = null;
+
+let currentTool = "pen";
+
+let isDrawing = false;
+
+
+/* ---------------------------------------------------------
+   2. UNDO / REDO
+--------------------------------------------------------- */
+
+let undoStack = [];
+
+let redoStack = [];
+
+
+/* ---------------------------------------------------------
+   3. PHOTO UPLOAD
+--------------------------------------------------------- */
+
+imageInput.addEventListener(
+  "change",
+  function () {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+
+    const reader =
+      new FileReader();
+
+
+    reader.onload = function (event) {
+
+      const img =
+        new Image();
+
+
+      img.onload = function () {
+
+        originalImage = img;
+
+
+        canvas.width =
+          img.naturalWidth;
+
+        canvas.height =
+          img.naturalHeight;
+
+
+        ctx.drawImage(
+          img,
+          0,
+          0
         );
 
-      }
 
-    });
+        undoStack = [];
 
-  </script>
+        redoStack = [];
+
+
+        saveHistory();
+
+
+        editor.classList.add("active");
+
+
+        document
+          .getElementById("uploadSection")
+          .style.display = "none";
+
+
+        setStatus(
+          "Photo loaded • Tool: Pen"
+        );
+
+      };
+
+
+      img.src =
+        event.target.result;
+
+    };
+
+
+    reader.readAsDataURL(file);
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   4. TOOL SELECT
+--------------------------------------------------------- */
+
+function setTool(tool) {
+
+  currentTool = tool;
+
+
+  if (tool === "pen") {
+
+    ctx.globalCompositeOperation =
+      "source-over";
+
+    ctx.strokeStyle =
+      "#ff1744";
+
+    ctx.lineWidth =
+      4;
+
+    setStatus(
+      "Tool: ✏️ Pen"
+    );
+
+  }
+
+
+  if (tool === "highlight") {
+
+    ctx.globalCompositeOperation =
+      "source-over";
+
+    ctx.strokeStyle =
+      "rgba(255, 235, 59, 0.45)";
+
+    ctx.lineWidth =
+      18;
+
+    setStatus(
+      "Tool: 🖍️ Highlight"
+    );
+
+  }
+
+
+  if (tool === "eraser") {
+
+    ctx.globalCompositeOperation =
+      "destination-out";
+
+    ctx.lineWidth =
+      25;
+
+    setStatus(
+      "Tool: 🧽 Eraser"
+    );
+
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   5. DRAWING
+--------------------------------------------------------- */
+
+function getPosition(event) {
+
+  const rect =
+    canvas.getBoundingClientRect();
+
+
+  const scaleX =
+    canvas.width /
+    rect.width;
+
+
+  const scaleY =
+    canvas.height /
+    rect.height;
+
+
+  let clientX;
+  let clientY;
+
+
+  if (event.touches) {
+
+    clientX =
+      event.touches[0].clientX;
+
+    clientY =
+      event.touches[0].clientY;
+
+  } else {
+
+    clientX =
+      event.clientX;
+
+    clientY =
+      event.clientY;
+
+  }
+
+
+  return {
+
+    x:
+      (clientX - rect.left)
+      * scaleX,
+
+    y:
+      (clientY - rect.top)
+      * scaleY
+
+  };
+
+}
+
+
+/* Mouse */
+
+canvas.addEventListener(
+  "mousedown",
+  startDrawing
+);
+
+canvas.addEventListener(
+  "mousemove",
+  draw
+);
+
+canvas.addEventListener(
+  "mouseup",
+  stopDrawing
+);
+
+canvas.addEventListener(
+  "mouseleave",
+  stopDrawing
+);
+
+
+/* Touch */
+
+canvas.addEventListener(
+  "touchstart",
+  startDrawing,
+  { passive: false }
+);
+
+canvas.addEventListener(
+  "touchmove",
+  draw,
+  { passive: false }
+);
+
+canvas.addEventListener(
+  "touchend",
+  stopDrawing
+);
+
+
+function startDrawing(event) {
+
+  event.preventDefault();
+
+
+  isDrawing = true;
+
+
+  const pos =
+    getPosition(event);
+
+
+  ctx.beginPath();
+
+  ctx.moveTo(
+    pos.x,
+    pos.y
+  );
+
+}
+
+
+function draw(event) {
+
+  if (!isDrawing) return;
+
+
+  event.preventDefault();
+
+
+  const pos =
+    getPosition(event);
+
+
+  ctx.lineTo(
+    pos.x,
+    pos.y
+  );
+
+
+  ctx.stroke();
+
+}
+
+
+function stopDrawing() {
+
+  if (!isDrawing) return;
+
+
+  isDrawing = false;
+
+
+  ctx.closePath();
+
+
+  saveHistory();
+
+}
+
+
+/* ---------------------------------------------------------
+   6. HISTORY
+--------------------------------------------------------- */
+
+function saveHistory() {
+
+  try {
+
+    undoStack.push(
+      canvas.toDataURL()
+    );
+
+
+    if (undoStack.length > 20) {
+
+      undoStack.shift();
+
+    }
+
+
+    redoStack = [];
+
+  } catch (error) {
+
+    console.log(
+      "History error:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   7. RESTORE HISTORY
+--------------------------------------------------------- */
+
+function restoreState(data) {
+
+  const img =
+    new Image();
+
+
+  img.onload = function () {
+
+    ctx.globalCompositeOperation =
+      "source-over";
+
+
+    ctx.clearRect(
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
+
+    ctx.drawImage(
+      img,
+      0,
+      0
+    );
+
+  };
+
+
+  img.src = data;
+
+}
+
+
+/* ---------------------------------------------------------
+   8. UNDO
+--------------------------------------------------------- */
+
+function undoEdit() {
+
+  if (undoStack.length <= 1) {
+
+    setStatus(
+      "Nothing to undo"
+    );
+
+    return;
+
+  }
+
+
+  const current =
+    undoStack.pop();
+
+
+  redoStack.push(
+    current
+  );
+
+
+  const previous =
+    undoStack[
+      undoStack.length - 1
+    ];
+
+
+  restoreState(
+    previous
+  );
+
+
+  setStatus(
+    "↩️ Undo"
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   9. REDO
+--------------------------------------------------------- */
+
+function redoEdit() {
+
+  if (redoStack.length === 0) {
+
+    setStatus(
+      "Nothing to redo"
+    );
+
+    return;
+
+  }
+
+
+  const next =
+    redoStack.pop();
+
+
+  undoStack.push(
+    next
+  );
+
+
+  restoreState(
+    next
+  );
+
+
+  setStatus(
+    "↪️ Redo"
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   10. RESET
+--------------------------------------------------------- */
+
+function resetImage() {
+
+  if (!originalImage) return;
+
+
+  ctx.globalCompositeOperation =
+    "source-over";
+
+
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+
+  ctx.drawImage(
+    originalImage,
+    0,
+    0
+  );
+
+
+  undoStack = [];
+
+  redoStack = [];
+
+
+  saveHistory();
+
+
+  setStatus(
+    "🔄 Original image restored"
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   11. SAVE / DOWNLOAD
+--------------------------------------------------------- */
+
+function downloadImage() {
+
+  if (!canvas.width) {
+
+    setStatus(
+      "पहले Photo upload करें"
+    );
+
+    return;
+
+  }
+
+
+  const link =
+    document.createElement("a");
+
+
+  link.download =
+    "PadhaiCore-Edited-Notes.png";
+
+
+  link.href =
+    canvas.toDataURL(
+      "image/png"
+    );
+
+
+  link.click();
+
+
+  setStatus(
+    "💾 Edited image तैयार है"
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   12. CLOSE EDITOR
+--------------------------------------------------------- */
+
+function closeEditor() {
+
+  editor.classList.remove(
+    "active"
+  );
+
+
+  document
+    .getElementById("uploadSection")
+    .style.display = "block";
+
+
+  imageInput.value = "";
+
+
+  originalImage = null;
+
+
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+
+  undoStack = [];
+
+  redoStack = [];
+
+
+  setStatus(
+    "Editor closed"
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   13. STATUS
+--------------------------------------------------------- */
+
+function setStatus(message) {
+
+  status.textContent =
+    message;
+
+}
+
+
+/* =========================================================
+   FUTURE FEATURES
+   =========================================================
+
+   आगे यहाँ नए features अलग-अलग functions में जोड़ेंगे:
+
+   1. Smart Text Replace
+   2. Style Match
+   3. Text Tool
+   4. Crop
+   5. Color Picker
+   6. Font Size
+   7. Shapes
+   8. OCR
+   9. Advanced Highlight
+   10. Better Save System
+
+   पुराने functions को बिना जरूरत नहीं बदलना है.
+
+========================================================= */
+
+</script>
 
 </body>
 </html>
