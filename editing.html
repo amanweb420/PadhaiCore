@@ -122,9 +122,7 @@ body{
 
 .upload-btn{
   display:inline-block;
-
   padding:12px 22px;
-
   border-radius:11px;
 
   background:linear-gradient(
@@ -134,11 +132,8 @@ body{
   );
 
   color:white;
-
   cursor:pointer;
-
   font-weight:bold;
-
   border:0;
 }
 
@@ -179,31 +174,20 @@ body{
 
 .toolbar{
   display:flex;
-
   flex-wrap:wrap;
-
   gap:8px;
-
   padding:12px;
-
   background:#0d1429;
-
   border-bottom:1px solid #263253;
 }
 
 .tool-btn{
   border:1px solid #2b3962;
-
   background:#111a35;
-
   color:white;
-
   border-radius:9px;
-
   padding:9px 13px;
-
   cursor:pointer;
-
   font-size:13px;
 }
 
@@ -233,9 +217,7 @@ body{
 
 .canvas-area{
   width:100%;
-
   min-height:400px;
-
   padding:15px;
 
   background:
@@ -245,28 +227,21 @@ body{
     ) 50% / 20px 20px;
 
   display:flex;
-
   justify-content:center;
-
   align-items:flex-start;
-
   overflow:auto;
 }
 
 #editorCanvas{
   display:block;
-
   max-width:100%;
-
   height:auto;
-
   background:white;
 
   box-shadow:
     0 10px 30px rgba(0,0,0,0.45);
 
   touch-action:none;
-
   cursor:crosshair;
 }
 
@@ -277,13 +252,9 @@ body{
 
 .status{
   padding:10px 14px;
-
   background:#0b1225;
-
   border-top:1px solid #202d50;
-
   color:#9da9c2;
-
   font-size:12px;
 }
 
@@ -294,9 +265,7 @@ body{
 
 .future-tools{
   margin-top:15px;
-
   padding:15px;
-
   border-radius:15px;
 
   background:rgba(0,212,255,0.04);
@@ -306,15 +275,12 @@ body{
 
 .future-tools h3{
   font-size:15px;
-
   margin-bottom:8px;
 }
 
 .future-tools p{
   color:#9da9c2;
-
   font-size:12px;
-
   line-height:1.6;
 }
 
@@ -339,7 +305,6 @@ body{
 
   .back{
     font-size:12px;
-
     padding:8px 10px;
   }
 
@@ -349,17 +314,13 @@ body{
 
   .tool-btn{
     flex:1;
-
     min-width:75px;
-
     font-size:11px;
-
     padding:9px 5px;
   }
 
   .canvas-area{
     min-height:300px;
-
     padding:8px;
   }
 
@@ -397,7 +358,6 @@ body{
 </div>
 
 
-
 <!-- =====================================================
      UPLOAD
 ===================================================== -->
@@ -420,9 +380,6 @@ body{
       Photo upload करके उसे यहाँ edit करें।
     </p>
 
-
-    <!-- BUTTON -->
-
     <button
       type="button"
       class="upload-btn"
@@ -431,9 +388,6 @@ body{
       📷 Choose Photo
 
     </button>
-
-
-    <!-- FILE INPUT -->
 
     <input
       type="file"
@@ -445,7 +399,6 @@ body{
 </section>
 
 
-
 <!-- =====================================================
      EDITOR
 ===================================================== -->
@@ -455,125 +408,114 @@ body{
   id="editor">
 
 
-<!-- =====================================================
-     TOOLBAR
-===================================================== -->
+  <!-- TOOLBAR -->
 
-<div class="toolbar">
+  <div class="toolbar">
 
+    <button
+      type="button"
+      class="tool-btn active"
+      id="penBtn">
 
-  <button
-    type="button"
-    class="tool-btn active"
-    id="penBtn">
+      ✏️ Pen
 
-    ✏️ Pen
-
-  </button>
+    </button>
 
 
-  <button
-    type="button"
-    class="tool-btn"
-    id="highlightBtn">
+    <button
+      type="button"
+      class="tool-btn"
+      id="highlightBtn">
 
-    🖍️ Highlight
+      🖍️ Highlight
 
-  </button>
-
-
-  <button
-    type="button"
-    class="tool-btn"
-    id="eraserBtn">
-
-    🧽 Eraser
-
-  </button>
+    </button>
 
 
-  <button
-    type="button"
-    class="tool-btn"
-    id="undoBtn">
+    <button
+      type="button"
+      class="tool-btn"
+      id="eraserBtn">
 
-    ↩️ Undo
+      🧽 Eraser
 
-  </button>
-
-
-  <button
-    type="button"
-    class="tool-btn"
-    id="redoBtn">
-
-    ↪️ Redo
-
-  </button>
+    </button>
 
 
-  <button
-    type="button"
-    class="tool-btn"
-    id="resetBtn">
+    <button
+      type="button"
+      class="tool-btn"
+      id="undoBtn">
 
-    🔄 Reset
+      ↩️ Undo
 
-  </button>
-
-
-  <button
-    type="button"
-    class="tool-btn save"
-    id="saveBtn">
-
-    💾 Save
-
-  </button>
+    </button>
 
 
-  <button
-    type="button"
-    class="tool-btn close"
-    id="closeBtn">
+    <button
+      type="button"
+      class="tool-btn"
+      id="redoBtn">
 
-    ✕ Close
+      ↪️ Redo
 
-  </button>
-
-
-</div>
+    </button>
 
 
+    <button
+      type="button"
+      class="tool-btn"
+      id="resetBtn">
 
-<!-- =====================================================
-     CANVAS
-===================================================== -->
+      🔄 Reset
 
-<div class="canvas-area">
-
-  <canvas
-    id="editorCanvas">
-  </canvas>
-
-</div>
+    </button>
 
 
+    <button
+      type="button"
+      class="tool-btn save"
+      id="saveBtn">
 
-<!-- =====================================================
-     STATUS
-===================================================== -->
+      💾 Save
 
-<div
-  class="status"
-  id="status">
+    </button>
 
-  Photo upload करें।
 
-</div>
+    <button
+      type="button"
+      class="tool-btn close"
+      id="closeBtn">
+
+      ✕ Close
+
+    </button>
+
+  </div>
+
+
+  <!-- CANVAS -->
+
+  <div class="canvas-area">
+
+    <canvas
+      id="editorCanvas">
+    </canvas>
+
+  </div>
+
+
+  <!-- STATUS -->
+
+  <div
+    class="status"
+    id="status">
+
+    Photo upload करें।
+
+  </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -603,12 +545,11 @@ body{
 </div>
 
 
-
 <script>
 
 /* =====================================================
    PADHAICORE EDITING STUDIO
-   FINAL BASE SYSTEM
+   BASE IMAGE EDITOR
 ===================================================== */
 
 
@@ -677,19 +618,22 @@ let undoStack = [];
 
 let redoStack = [];
 
-
-/*
-   Maximum canvas size.
-
-   इससे बहुत बड़ी mobile photo
-   browser को crash नहीं करेगी।
-*/
-
 const MAX_IMAGE_SIZE = 3000;
 
 
 /* =====================================================
-   3. CHOOSE PHOTO BUTTON
+   3. STATUS
+===================================================== */
+
+function setStatus(message){
+
+  status.textContent = message;
+
+}
+
+
+/* =====================================================
+   4. CHOOSE PHOTO
 ===================================================== */
 
 choosePhotoBtn.addEventListener(
@@ -703,7 +647,7 @@ choosePhotoBtn.addEventListener(
 
 
 /* =====================================================
-   4. PHOTO SELECT
+   5. PHOTO SELECT
 ===================================================== */
 
 imageInput.addEventListener(
@@ -726,17 +670,13 @@ imageInput.addEventListener(
     }
 
 
-    /*
-      Image file check
-    */
-
     if(
       !file.type ||
       !file.type.startsWith("image/")
     ){
 
       setStatus(
-        "❌ केवल JPG / PNG / WebP image चुनें"
+        "❌ केवल image file चुनें"
       );
 
       return;
@@ -772,7 +712,7 @@ imageInput.addEventListener(
           function(){
 
             setStatus(
-              "❌ यह photo browser में load नहीं हो सकी। JPG/PNG photo try करें।"
+              "❌ Photo load नहीं हो सकी"
             );
 
           };
@@ -801,7 +741,7 @@ imageInput.addEventListener(
 
 
 /* =====================================================
-   5. LOAD IMAGE
+   6. LOAD IMAGE
 ===================================================== */
 
 function loadImageToEditor(img){
@@ -815,9 +755,22 @@ function loadImageToEditor(img){
       img.naturalHeight;
 
 
+    if(
+      !width ||
+      !height
+    ){
+
+      setStatus(
+        "❌ Photo का size पढ़ा नहीं जा सका"
+      );
+
+      return;
+
+    }
+
+
     /*
-      अगर photo बहुत बड़ी है,
-      तो उसे proportionally छोटा करेंगे।
+      बहुत बड़ी image को resize करें
     */
 
     const largestSide =
@@ -878,10 +831,7 @@ function loadImageToEditor(img){
     );
 
 
-    /*
-      Original image भी resized version
-      में रखेंगे ताकि Reset सही काम करे।
-    */
+    /* Original image */
 
     originalImage =
       document.createElement("canvas");
@@ -907,25 +857,19 @@ function loadImageToEditor(img){
     );
 
 
-    /*
-      History
-    */
+    /* History reset */
 
     undoStack = [];
 
     redoStack = [];
 
-
     saveHistory();
 
 
-    /*
-      Editor दिखाएँ
-    */
+    /* Editor show */
 
     uploadSection.style.display =
       "none";
-
 
     editor.classList.add(
       "active"
@@ -936,14 +880,8 @@ function loadImageToEditor(img){
 
 
     setStatus(
-      "✅ Photo ready • अब photo पर लिख सकते हैं"
+      "✅ Photo ready • अब photo पर edit करें"
     );
-
-
-    /*
-      File input reset नहीं करेंगे,
-      ताकि browser state ठीक रहे।
-    */
 
   }
 
@@ -953,7 +891,6 @@ function loadImageToEditor(img){
       "Image loading error:",
       error
     );
-
 
     setStatus(
       "❌ Photo load करते समय समस्या हुई"
@@ -965,7 +902,7 @@ function loadImageToEditor(img){
 
 
 /* =====================================================
-   6. TOOL SELECT
+   7. TOOL SELECT
 ===================================================== */
 
 function setTool(tool){
@@ -973,10 +910,6 @@ function setTool(tool){
   currentTool =
     tool;
 
-
-  /*
-    सभी active हटाएँ
-  */
 
   penBtn.classList.remove(
     "active"
@@ -991,9 +924,7 @@ function setTool(tool){
   );
 
 
-  /*
-    PEN
-  */
+  /* PEN */
 
   if(tool === "pen"){
 
@@ -1025,9 +956,7 @@ function setTool(tool){
   }
 
 
-  /*
-    HIGHLIGHT
-  */
+  /* HIGHLIGHT */
 
   if(tool === "highlight"){
 
@@ -1059,11 +988,15 @@ function setTool(tool){
   }
 
 
-  /*
-    ERASER
-  */
+  /* ERASER */
 
   if(tool === "eraser"){
+
+    /*
+      Important:
+      Eraser केवल drawing/photo के pixels हटाता है।
+      अगला version में smart eraser बनाया जाएगा।
+    */
 
     ctx.globalCompositeOperation =
       "destination-out";
@@ -1084,7 +1017,7 @@ function setTool(tool){
 
 
     setStatus(
-      "🧽 Eraser • अपनी drawing हटाएँ"
+      "🧽 Eraser • drawing हटाएँ"
     );
 
   }
@@ -1093,7 +1026,7 @@ function setTool(tool){
 
 
 /* =====================================================
-   7. POSITION
+   8. POSITION
 ===================================================== */
 
 function getPosition(event){
@@ -1113,7 +1046,6 @@ function getPosition(event){
 
 
   let clientX;
-
   let clientY;
 
 
@@ -1157,7 +1089,7 @@ function getPosition(event){
 
 
 /* =====================================================
-   8. START DRAWING
+   9. START DRAWING
 ===================================================== */
 
 function startDrawing(event){
@@ -1170,7 +1102,6 @@ function startDrawing(event){
 
 
   event.preventDefault();
-
 
   isDrawing =
     true;
@@ -1192,7 +1123,7 @@ function startDrawing(event){
 
 
 /* =====================================================
-   9. DRAW
+   10. DRAW
 ===================================================== */
 
 function draw(event){
@@ -1223,7 +1154,7 @@ function draw(event){
 
 
 /* =====================================================
-   10. STOP DRAWING
+   11. STOP DRAWING
 ===================================================== */
 
 function stopDrawing(event){
@@ -1255,7 +1186,7 @@ function stopDrawing(event){
 
 
 /* =====================================================
-   11. MOUSE EVENTS
+   12. MOUSE EVENTS
 ===================================================== */
 
 canvas.addEventListener(
@@ -1280,7 +1211,7 @@ canvas.addEventListener(
 
 
 /* =====================================================
-   12. TOUCH EVENTS
+   13. TOUCH EVENTS
 ===================================================== */
 
 canvas.addEventListener(
@@ -1309,7 +1240,7 @@ canvas.addEventListener(
 
 
 /* =====================================================
-   13. HISTORY
+   14. HISTORY
 ===================================================== */
 
 function saveHistory(){
@@ -1334,11 +1265,6 @@ function saveHistory(){
       imageData
     );
 
-
-    /*
-      Maximum 15 history states
-      ताकि mobile memory ज्यादा न खाए।
-    */
 
     if(
       undoStack.length > 15
@@ -1366,7 +1292,7 @@ function saveHistory(){
 
 
 /* =====================================================
-   14. RESTORE HISTORY
+   15. RESTORE HISTORY
 ===================================================== */
 
 function restoreState(data){
@@ -1399,10 +1325,6 @@ function restoreState(data){
       );
 
 
-      /*
-        Current tool फिर से apply
-      */
-
       setTool(
         currentTool
       );
@@ -1417,7 +1339,7 @@ function restoreState(data){
 
 
 /* =====================================================
-   15. UNDO
+   16. UNDO
 ===================================================== */
 
 function undoEdit(){
@@ -1463,7 +1385,7 @@ function undoEdit(){
 
 
 /* =====================================================
-   16. REDO
+   17. REDO
 ===================================================== */
 
 function redoEdit(){
@@ -1503,7 +1425,7 @@ function redoEdit(){
 
 
 /* =====================================================
-   17. RESET
+   18. RESET
 ===================================================== */
 
 function resetImage(){
@@ -1544,7 +1466,6 @@ function resetImage(){
 
   redoStack = [];
 
-
   saveHistory();
 
 
@@ -1561,7 +1482,7 @@ function resetImage(){
 
 
 /* =====================================================
-   18. SAVE
+   19. SAVE
 ===================================================== */
 
 function downloadImage(){
@@ -1586,14 +1507,25 @@ function downloadImage(){
     link.download =
       "PadhaiCore-Edited-Notes.png";
 
-    link.href =
-      canvas.toDataURL("image/png");
 
-    document.body.appendChild(link);
+    link.href =
+      canvas.toDataURL(
+        "image/png"
+      );
+
+
+    document.body.appendChild(
+      link
+    );
+
 
     link.click();
 
-    document.body.removeChild(link);
+
+    document.body.removeChild(
+      link
+    );
+
 
     setStatus(
       "✅ Edited photo save हो गई"
@@ -1608,6 +1540,7 @@ function downloadImage(){
       error
     );
 
+
     setStatus(
       "❌ Photo save नहीं हो सकी"
     );
@@ -1615,10 +1548,8 @@ function downloadImage(){
   }
 
 }
-
-
 /* =====================================================
-   19. BUTTON EVENTS
+   20. BUTTON EVENTS
 ===================================================== */
 
 penBtn.addEventListener(
@@ -1692,7 +1623,7 @@ saveBtn.addEventListener(
 
 
 /* =====================================================
-   20. CLOSE EDITOR
+   21. CLOSE EDITOR
 ===================================================== */
 
 closeBtn.addEventListener(
@@ -1703,8 +1634,55 @@ closeBtn.addEventListener(
       "active"
     );
 
+
     uploadSection.style.display =
       "block";
+
+
+    /*
+      Drawing state बंद करें
+    */
+
+    isDrawing =
+      false;
+
+
+    /*
+      Canvas साफ करें
+    */
+
+    ctx.globalCompositeOperation =
+      "source-over";
+
+
+    ctx.clearRect(
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
+
+    /*
+      Original data हटाएँ
+    */
+
+    originalImage =
+      null;
+
+
+    undoStack = [];
+
+    redoStack = [];
+
+
+    /*
+      File input reset
+    */
+
+    imageInput.value =
+      "";
+
 
     setStatus(
       "Photo upload करें।"
@@ -1715,27 +1693,70 @@ closeBtn.addEventListener(
 
 
 /* =====================================================
-   21. STATUS
+   22. EXTRA SAFETY
 ===================================================== */
 
-function setStatus(message){
+/*
+   अगर user canvas के बाहर mouse छोड़ दे
+   तो drawing बंद हो जाए।
+*/
 
-  status.textContent =
-    message;
+document.addEventListener(
+  "mouseup",
+  function(){
 
-}
+    if(isDrawing){
+
+      stopDrawing();
+
+    }
+
+  }
+);
+
+
+/*
+   Mobile में touch cancel होने पर
+   drawing बंद करें।
+*/
+
+canvas.addEventListener(
+  "touchcancel",
+  function(){
+
+    if(isDrawing){
+
+      stopDrawing();
+
+    }
+
+  },
+  {
+    passive:false
+  }
+);
 
 
 /* =====================================================
-   22. INITIAL TOOL
+   23. INITIAL STATE
 ===================================================== */
 
 setTool("pen");
-    
-      setTool("pen");
+
+setStatus(
+  "Photo upload करें।"
+);
+
+
+/* =====================================================
+   24. PAGE LOAD COMPLETE
+===================================================== */
+
+console.log(
+  "PadhaiCore Editing Studio Ready ✅"
+);
 
 </script>
 
 </body>
 </html>
-   
