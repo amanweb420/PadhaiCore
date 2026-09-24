@@ -136,7 +136,34 @@ body {
   width: 91%;
   height: 15%;
 }
+/* 6 — Student Profile */
+.profile {
+  left: 4.5%;
+  top: 101%;
+  width: 91%;
+  height: 15%;
 
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+
+  opacity: 1;
+}
+
+.profile span,
+.profile b,
+.profile small {
+  opacity: 1;
+  color: white;
+}
+
+.profile b {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.profile small {
+  font-size: 13px;
+}
 /* =========================
    MOBILE
    ========================= */
