@@ -23,7 +23,10 @@ function openSection(section) {
     case "editing":
       window.location.href = "editing.html";
       break;
-
+    case "profile":
+      window.location.href = "profile.html";
+      break;
+      
     default:
       console.log("Section not found:", section);
   }
