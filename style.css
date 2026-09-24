@@ -138,17 +138,40 @@ body {
 }
 /* 6 — Student Profile */
 .profile {
+  position: relative;
+
   left: 4.5%;
-  top: 20px;
+  top: 15px;
+
   width: 91%;
-  height: 15%;
+  height: 100px;
 
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: 1px solid rgba(50, 180, 255, 0.35);
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #073b5c,
+    #07527a,
+    #063b62
+  );
+
   color: white;
-
   opacity: 1;
+
+  padding: 18px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  box-shadow: 0 8px 20px rgba(0, 80, 130, 0.25);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Profile का content दिखाई दे */
 .profile span,
 .profile b,
 .profile small {
@@ -156,13 +179,24 @@ body {
   color: white;
 }
 
+.profile span {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
 .profile b {
-  font-size: 20px;
-  margin-bottom: 6px;
+  font-size: 18px;
 }
 
 .profile small {
-  font-size: 13px;
+  font-size: 12px;
+  color: #b9d9ec;
+}
+
+/* दबाने पर हल्का effect */
+.profile:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 10px rgba(0, 80, 130, 0.2);
 }
 /* =========================
    MOBILE
