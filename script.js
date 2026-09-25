@@ -23,6 +23,9 @@ function openSection(section) {
     case "editing":
       window.location.href = "editing.html";
       break;
+      // ==============================
+// STUDENT PROFILE
+// ==============================
     case "profile":
       window.location.href = "profile.html";
       break;
@@ -31,4 +34,19 @@ function openSection(section) {
       console.log("Section not found:", section);
   }
 
+}
+function saveProfile() {
+
+  const profile = {
+    name: document.getElementById("profileName").value,
+    className: document.getElementById("profileClass").value,
+    stream: document.getElementById("profileStream").value,
+    board: document.getElementById("profileBoard").value,
+    school: document.getElementById("profileSchool").value,
+    goal: document.getElementById("profileGoal").value
+  };
+
+  localStorage.setItem("studentProfile", JSON.stringify(profile));
+
+  alert("✅ Profile Saved Successfully!");
 }
