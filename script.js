@@ -62,3 +62,22 @@ function saveRoutine() {
 
   alert("✅ Daily Routine Saved Successfully!");
 }
+function loadRoutine() {
+
+  const savedRoutine = localStorage.getItem("dailyRoutine");
+
+  if (!savedRoutine) {
+    return;
+  }
+
+  const routine = JSON.parse(savedRoutine);
+
+  document.getElementById("routineDisplay").innerHTML = `
+    <h3>📚 Your Daily Routine</h3>
+    <p>⏰ Time: ${routine.time}</p>
+    <p>📖 Subject: ${routine.subject}</p>
+    <p>📝 Task: ${routine.task}</p>
+  `;
+}
+
+window.addEventListener("DOMContentLoaded", loadRoutine);
