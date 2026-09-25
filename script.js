@@ -50,3 +50,15 @@ function saveProfile() {
 
   alert("✅ Profile Saved Successfully!");
 }
+function saveRoutine() {
+
+  const routine = {
+    time: document.getElementById("routineTime").value,
+    subject: document.getElementById("routineSubject").value,
+    task: document.getElementById("routineTask").value
+  };
+
+  localStorage.setItem("dailyRoutine", JSON.stringify(routine));
+
+  alert("✅ Daily Routine Saved Successfully!");
+}
