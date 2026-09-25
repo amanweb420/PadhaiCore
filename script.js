@@ -23,13 +23,13 @@ function openSection(section) {
     case "editing":
       window.location.href = "editing.html";
       break;
-      // ==============================
-// STUDENT PROFILE
-// ==============================
+      
     case "profile":
       window.location.href = "profile.html";
       break;
-      
+  // ============================
+// STUDENT PROFILE
+// ==============================
     default:
       console.log("Section not found:", section);
   }
