@@ -46,3 +46,47 @@ h1 {
     font-size: 16px;
     cursor: pointer;
 }
+.profile-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #ccc;
+}
+
+.profile-form h2 {
+    text-align: center;
+    color: #173f5f;
+    margin-top: 0;
+}
+
+.profile-form label {
+    display: block;
+    margin-top: 15px;
+    color: #173f5f;
+    font-weight: bold;
+}
+
+.profile-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.save-profile-btn {
+    display: block;
+    margin: 25px auto 5px;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #173f5f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
