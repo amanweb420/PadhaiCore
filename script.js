@@ -27,14 +27,14 @@ function openSection(section) {
     case "profile":
       window.location.href = "profile.html";
       break;
-  // ============================
-// STUDENT PROFILE
-// ==============================
     default:
       console.log("Section not found:", section);
   }
 
 }
+// ==============================
+// STUDENT PROFILE
+// ==============================
 function saveProfile() {
 
   const profile = {
